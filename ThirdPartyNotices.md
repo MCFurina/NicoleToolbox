@@ -1,5 +1,5 @@
 ﻿# Third-Party Notices
-"VideoResourcesWindow.xaml"and "VideoResourcesWindow.xaml.cs" From [FufuLauncher/FufuLauncher](https://github.com/FufuLauncher/FufuLauncher)  
+"VideoResourcesWindow.xaml" and "VideoResourcesWindow.xaml.cs" From [FufuLauncher/FufuLauncher](https://github.com/FufuLauncher/FufuLauncher) and fixed some bugs.   
 Use This License:  
 MIT License  
 
