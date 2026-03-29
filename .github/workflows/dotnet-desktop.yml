@@ -1,5 +1,8 @@
 name: AutoBuildAndRelease
 
+permissions:
+  contents: write
+  
 on:
   push:
     branches:
@@ -20,9 +23,11 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git tag -f dev
-          git push -f origin dev
+          git push -f https://x-access-token:${{ env.TOKEN }}@github.com/MCFurina/NicoleToolbox.git dev
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup .NET 10
+      - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '10.0.x'
@@ -42,5 +47,4 @@ jobs:
           tag: dev
           files: NicoleToolbox-Dev.zip
           prerelease: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
