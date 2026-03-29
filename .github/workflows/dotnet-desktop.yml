@@ -35,7 +35,7 @@ jobs:
       - name: Publish
         run: |
           dotnet restore
-          dotnet publish NicoleToolbox.csproj -c Release -o publish
+          dotnet publish NicoleToolbox.csproj -c Release -o publish -a x64
 
       - name: Zip
         run: Compress-Archive -Path publish/* -DestinationPath NicoleToolbox-Dev.zip
