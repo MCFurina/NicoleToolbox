@@ -18,15 +18,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Create dev tag
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git tag -f dev
-          git push -f https://x-access-token:${{ env.TOKEN }}@github.com/MCFurina/NicoleToolbox.git dev
-        env:
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
@@ -38,13 +29,15 @@ jobs:
           dotnet publish NicoleToolbox.csproj -c Release -o publish -a x64 --no-self-contained
 
       - name: Zip
-        run: Compress-Archive -Path publish/* -DestinationPath NicoleToolbox-Dev.zip
+        run: |
+          $zipName = "NicoleToolbox-${{ github.run_number }}.zip"
+          Compress-Archive -Path publish/* -DestinationPath $zipName
 
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          name: Dev Build (自动构建)
-          tag_name: dev
-          files: NicoleToolbox-Dev.zip
+          name: Dev Release #${{ github.run_number }}
+          tag_name: dev-${{ github.run_number }}
+          files: NicoleToolbox-${{ github.run_number }}.zip
           prerelease: false
           token: ${{ secrets.GITHUB_TOKEN }}
