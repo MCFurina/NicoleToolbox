@@ -35,7 +35,7 @@ jobs:
       - name: Publish
         run: |
           dotnet restore
-          dotnet publish NicoleToolbox.csproj -c Release -o publish -a x64
+          dotnet publish NicoleToolbox.csproj -c Release -o publish -a x64 --no-self-contained
 
       - name: Zip
         run: Compress-Archive -Path publish/* -DestinationPath NicoleToolbox-Dev.zip
@@ -43,8 +43,8 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          name: Development Build
-          tag: dev
+          name: Dev Build (自动构建)
+          tag_name: dev
           files: NicoleToolbox-Dev.zip
           prerelease: true
           token: ${{ secrets.GITHUB_TOKEN }}
