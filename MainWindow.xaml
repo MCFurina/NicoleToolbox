@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="NicoleToolbox.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NicoleToolbox"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop/>
+    </Window.SystemBackdrop>
+    <Grid>
+        <TitleBar x:Name="titleBar" Title="尼可工具箱" Subtitle="Dev" IsBackButtonVisible="False" IsPaneToggleButtonVisible="False" VerticalAlignment="Top" Height="32">
+            <TitleBar.IconSource>
+                <ImageIconSource ImageSource="/Assets/Logo.ico"/>
+            </TitleBar.IconSource>
+        </TitleBar>
+        <NavigationView x:Name="Nav" PaneDisplayMode="Auto" IsSettingsVisible="False" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="True" Margin="0,32,0,0">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Content="主页" Icon="Home" Tag="Home"/>
+                
+                <NavigationViewItem Content="所有地区" Tag="Map">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="/Assets/Fonts/SegoeIcons.ttf#Segoe Fluent Icons" Glyph="&#xECAF;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                
+                <NavigationViewItem Content="在线地图" Tag="WebMap">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="/Assets/Fonts/SegoeIcons.ttf#Segoe Fluent Icons" Glyph="&#xE800;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Content="养成计算器" Tag="Calc">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="/Assets/Fonts/SegoeIcons.ttf#Segoe Fluent Icons" Glyph="&#xE8EF;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Content="观测枢" Tag="Wiki">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="/Assets/Fonts/SegoeIcons.ttf#Segoe Fluent Icons" Glyph="&#xE82D;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Content="阵容广场" Tag="Lineup">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="/Assets/Fonts/SegoeIcons.ttf#Segoe Fluent Icons" Glyph="&#xE716;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Content="UID角色查询" Tag="Enka">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="/Assets/Fonts/SegoeIcons.ttf#Segoe Fluent Icons" Glyph="&#xED37;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Content="游戏公告" Tag="GameAnnouncement">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="/Assets/Fonts/SegoeIcons.ttf#Segoe Fluent Icons" Glyph="&#xE789;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Content="更多工具推荐" Tag="More">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="/Assets/Fonts/SegoeIcons.ttf#Segoe Fluent Icons" Glyph="&#xE712;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Content="关于" Tag="About">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="/Assets/Fonts/SegoeIcons.ttf#Segoe Fluent Icons" Glyph="&#xE946;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+
+            <Frame x:Name="ContentFrame"/>
+        </NavigationView>
+    </Grid>
+</Window>

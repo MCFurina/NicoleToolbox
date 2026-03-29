@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "NicoleToolbox (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "NicoleToolbox (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

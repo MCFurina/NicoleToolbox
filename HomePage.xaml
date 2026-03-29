@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="NicoleToolbox.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NicoleToolbox"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <TextBlock Text="主页" FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0"/>
+        <TextBlock Text="欢迎进入尼可工具箱，功能集合都在这里" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,120,0,0"/>
+        <Button Content="查看原神所有主要地区，点击可查看百度百科" Click="GoMapPage" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,300,0,0"/>
+        <Button Content="查看原神官方在线地图" Click="GoWebMapPage" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,350,0,0"/>
+        <Button Content="使用官方养成计算器" Click="GoCalcPage" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,400,0,0"/>
+        <Button Content="查看官方Wiki（观测枢）" Click="GoWikiPage" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,450,0,0"/>
+        <Button Content="查看官方阵容广场" Click="GoLineupPage" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,500,0,0"/>
+        <Button Content="根据UID查询角色详细信息（需要将角色在个人界面展示且公开详细信息）" Click="GoEnkaPage" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,550,0,0"/>
+        <Button Content="查看官方公告" Click="GoGameAnnouncementPage" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,600,0,0"/>
+        <Button Content="查看更多工具推荐" Click="GoMorePage" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,650,0,0"/>
+        <Button Content="角色视频和过场动画" Click="OpenVideoWindow" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,700,0,0"/>
+    </Grid>
+</Page>

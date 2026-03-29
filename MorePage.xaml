@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="NicoleToolbox.MorePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NicoleToolbox"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <TextBlock Text="更多工具推荐" FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0"/>
+        <Button Width="500" Height="100" Click="Button1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,120,0,0">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="芙芙启动器" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>
+                <TextBlock Text="专为PC端原神玩家打造的多功能启动器" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gray"/>
+            </StackPanel>
+        </Button>
+        <Button Width="500" Height="100" Click="Button2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,230,0,0">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="BetterGI" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>
+                <TextBlock Text="可自动执行一些任务，让原神变的更好" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gray"/>
+            </StackPanel>
+        </Button>
+        <Button Width="500" Height="100" Click="Button3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,340,0,0">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="空荧酒馆地图" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>
+                <TextBlock Text="也是一个网页版原神地图，似乎比官方做的更好？" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gray"/>
+            </StackPanel>
+        </Button>
+    </Grid>
+</Page>
