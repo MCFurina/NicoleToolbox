@@ -22,10 +22,11 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '10.0.x'
+          cache: true
 
       - name: Publish
         run: |
-          dotnet publish NicoleToolbox.csproj -c Release -o publish -a x64 --no-self-contained
+          dotnet publish NicoleToolbox.csproj -c Release -o publish -a x64 --no-self-contained /m
 
       - name: Zip
         run: |
