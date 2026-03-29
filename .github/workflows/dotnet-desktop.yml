@@ -1,8 +1,9 @@
-name: Build & Release
+name: AutoBuildAndRelease
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
 
 jobs:
   build:
@@ -11,23 +12,35 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create dev tag
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git tag -f dev
+          git push -f origin dev
 
       - name: Setup .NET 10
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '10.0.x'
 
-      - name: Restore & Build
+      - name: Publish
         run: |
           dotnet restore
-          dotnet publish -c Release -o publish
+          dotnet publish NicoleToolbox.csproj -c Release -o publish
 
-      - name: Zip output
+      - name: Zip
         run: Compress-Archive -Path publish/* -DestinationPath NicoleToolbox-Dev.zip
 
-      - name: Create Release
+      - name: Release
         uses: softprops/action-gh-release@v2
         with:
+          name: Development Build
+          tag: dev
           files: NicoleToolbox-Dev.zip
+          prerelease: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
