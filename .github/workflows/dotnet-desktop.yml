@@ -25,7 +25,6 @@ jobs:
 
       - name: Publish
         run: |
-          dotnet restore
           dotnet publish NicoleToolbox.csproj -c Release -o publish -a x64 --no-self-contained
 
       - name: Zip
@@ -36,7 +35,7 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          name: Dev Release #${{ github.run_number }}
+          name: "Dev Release #${{ github.run_number }}"
           tag_name: dev-${{ github.run_number }}
           files: NicoleToolbox-${{ github.run_number }}.zip
           prerelease: false
