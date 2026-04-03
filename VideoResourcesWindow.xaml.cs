@@ -4,6 +4,7 @@ using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.Web.WebView2.Core;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -50,6 +51,9 @@ public sealed partial class VideoResourcesWindow : Window, INotifyPropertyChange
     public VideoResourcesWindow()
     {
         InitializeComponent();
+
+        AppWindow.SetIcon(Path.Combine(AppContext.BaseDirectory, "Assets/Logo.ico"));
+        Title = "视频资源库";
 
         ExtendsContentIntoTitleBar = true;
         SetTitleBar(AppTitleBar);
