@@ -11,14 +11,11 @@
     <Grid>
         <TextBlock Text="主页" FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0"/>
         <TextBlock Text="欢迎进入尼可工具箱，功能集合都在这里" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,120,0,0"/>
-        <Button Content="查看原神所有主要地区，点击可查看百度百科" Click="GoMapPage" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,300,0,0"/>
-        <Button Content="查看原神官方在线地图" Click="GoWebMapPage" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,350,0,0"/>
-        <Button Content="使用官方养成计算器" Click="GoCalcPage" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,400,0,0"/>
-        <Button Content="查看官方Wiki（观测枢）" Click="GoWikiPage" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,450,0,0"/>
-        <Button Content="查看官方阵容广场" Click="GoLineupPage" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,500,0,0"/>
-        <Button Content="根据UID查询角色详细信息（需要将角色在个人界面展示且公开详细信息）" Click="GoEnkaPage" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,550,0,0"/>
-        <Button Content="查看官方公告" Click="GoGameAnnouncementPage" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,600,0,0"/>
-        <Button Content="查看更多工具推荐" Click="GoMorePage" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,650,0,0"/>
-        <Button Content="角色视频和过场动画" Click="OpenVideoWindow" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,700,0,0"/>
+        <Button Click="OpenVideoWindow" Width="400" Height="100" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="25,0,0,100">
+            <Grid>
+                <TextBlock Text="视频资源库" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
+                <TextBlock Text="浏览过场动画与角色视频并可以直接下载" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"  Foreground="Gray"/>
+            </Grid>
+        </Button>
     </Grid>
 </Page>

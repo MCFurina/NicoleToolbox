@@ -83,15 +83,19 @@ public sealed partial class VideoResourcesWindow : Window, INotifyPropertyChange
         catch (Exception ex) { Debug.WriteLine($"Init failed: {ex.Message}"); }
     }
 
-    private async void OnPivotSelectionChanged(object sender, SelectionChangedEventArgs e)
+    private async void OnSelectorBarSelectionChanged(SelectorBar sender, SelectorBarSelectionChangedEventArgs args)
     {
-        // 修复：安全类型转换 + 空判断
-        if (sender is Pivot pivot && pivot.SelectedItem is PivotItem item)
+        // 完全复用原有逻辑，仅适配 SelectorBar 类型
+        if (sender.SelectedItem is SelectorBarItem item)
         {
             if (item.Tag?.ToString() == "Cutscene" && CutsceneVideos.Count == 0)
                 await LoadVideosAsync(CUTSCENE_URL, CutsceneVideos);
             else if (item.Tag?.ToString() == "Character" && CharacterVideos.Count == 0)
                 await LoadVideosAsync(CHAR_VIDEO_URL, CharacterVideos);
+
+            // 新增：面板显隐控制（对应你XAML里的两个Grid）
+            CharacterPanel.Visibility = item.Tag?.ToString() == "Character" ? Visibility.Visible : Visibility.Collapsed;
+            CutscenePanel.Visibility = item.Tag?.ToString() == "Cutscene" ? Visibility.Visible : Visibility.Collapsed;
         }
     }
 

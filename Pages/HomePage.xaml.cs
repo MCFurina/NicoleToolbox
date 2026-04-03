@@ -28,46 +28,6 @@ namespace NicoleToolbox
             InitializeComponent();
         }
 
-        private void GoMapPage (object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(MapPage));
-        }
-
-        private void GoWebMapPage(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(WebMapPage));
-        }
-
-        private void GoCalcPage(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(CalcPage));
-        }
-
-        private void GoWikiPage(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(WikiPage));
-        }
-
-        private void GoLineupPage(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(LineupPage));
-        }
-
-        private void GoEnkaPage(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(EnkaPage));
-        }
-
-        private void GoGameAnnouncementPage(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(GameAnnouncementPage));
-        }
-
-        private void GoMorePage(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(MorePage));
-        }
-
         private void OpenVideoWindow(object sender, RoutedEventArgs e)
         {
             VideoResourcesWindow videoWindow = new VideoResourcesWindow();
