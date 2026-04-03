@@ -18,7 +18,7 @@
                 <ImageIconSource ImageSource="/Assets/Logo.ico"/>
             </TitleBar.IconSource>
         </TitleBar>
-        <NavigationView x:Name="Nav" PaneDisplayMode="Auto" IsSettingsVisible="False" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="True" Margin="0,32,0,0">
+        <NavigationView x:Name="Nav" PaneDisplayMode="Auto" IsSettingsVisible="True" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="True" Margin="0,32,0,0">
             <NavigationView.MenuItems>
                 <NavigationViewItem Content="主页" Tag="Home">
                     <NavigationViewItem.Icon>

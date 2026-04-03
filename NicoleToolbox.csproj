@@ -19,20 +19,13 @@
 	<!-- 设置图标 -->
 	<ApplicationIcon>Assets\Logo.ico</ApplicationIcon>
   </PropertyGroup>
-  <ItemGroup>
-    <None Remove="CalcPage.xaml" />
-    <None Remove="EnkaPage.xaml" />
-    <None Remove="GameAnnouncementPage.xaml" />
-    <None Remove="HomePage.xaml" />
-    <None Remove="LineupPage.xaml" />
-    <None Remove="MorePage.xaml" />
-    <None Remove="VideoResourcesWindow.xaml" />
-    <None Remove="WebMapPage.xaml" />
-    <None Remove="WikiPage.xaml" />
-  </ItemGroup>
 
   <ItemGroup>
     <Content Include="Assets\**\*" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Pages\SettingsPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -55,51 +48,14 @@
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.260317003" />
   </ItemGroup>
   <ItemGroup>
-    <Page Update="VideoResourcesWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <Folder Include="Windows\" />
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MorePage.xaml">
+    <Page Update="Pages\SettingsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <Page Update="EnkaPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="GameAnnouncementPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="LineupPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="WikiPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="CalcPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="WebMapPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="HomePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-
+	
   <!--
     Defining the "HasPackageAndPublishMenuAddedByProject" property here allows the Solution
     Explorer "Package and Publish" context menu entry to be enabled for this project even if

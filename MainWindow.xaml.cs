@@ -31,6 +31,12 @@ namespace NicoleToolbox
             AppWindow.SetIcon(Path.Combine(AppContext.BaseDirectory, "Assets/Logo.ico"));
             Title = "尼可工具箱";
 
+            // 给导航栏自带的设置按钮设置Tag
+            if (Nav.SettingsItem is NavigationViewItem settingsItem)
+            {
+                settingsItem.Tag = "Settings";
+            }
+
             // 安全绑定导航点击事件（防止控件为 null）
             if (Nav != null)
             {
@@ -100,6 +106,9 @@ namespace NicoleToolbox
                     case "About":
                         ContentFrame?.Navigate(typeof(AboutPage));
                         break;
+                    case "Settings":
+                        ContentFrame?.Navigate(typeof(SettingsPage));
+                        break;
                 }
             }
         }
@@ -132,6 +141,7 @@ namespace NicoleToolbox
                         System.Type t when t == typeof(GameAnnouncementPage) => tag == "GameAnnouncement",
                         System.Type t when t == typeof(MorePage) => tag == "More",
                         System.Type t when t == typeof(AboutPage) => tag == "About",
+                        System.Type t when t == typeof(SettingsPage) => tag == "Settings",
                         _ => false
                     };
 
