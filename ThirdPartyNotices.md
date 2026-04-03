@@ -1,6 +1,6 @@
-﻿# Third-Party Notices
-"VideoResourcesWindow.xaml" and "VideoResourcesWindow.xaml.cs" From [FufuLauncher/FufuLauncher](https://github.com/FufuLauncher/FufuLauncher) and fixed some bugs.   
-Use This License:  
+﻿# 第三方说明
+## "VideoResourcesWindow.xaml" 和 "VideoResourcesWindow.xaml.cs" 是在线获取过场动画与角色视频的工具，来自此项目 [FufuLauncher/FufuLauncher](https://github.com/FufuLauncher/FufuLauncher) 并修复了一些问题  
+### 使用以下协议（以原文提供）：  
 MIT License  
 
 Copyright (c) 2025 Dev. CodeCubist  
