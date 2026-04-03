@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 using Windows.System;
 using Windows.UI;
 
-namespace FufuLauncher.Views;
+namespace NicoleToolbox;
 
 public class VideoItem
 {
@@ -53,6 +53,12 @@ public sealed partial class VideoResourcesWindow : Window, INotifyPropertyChange
 
         ExtendsContentIntoTitleBar = true;
         SetTitleBar(AppTitleBar);
+        var root = Content as FrameworkElement;
+        if (root != null)
+        {
+            root.ActualThemeChanged += Root_ActualThemeChanged;
+            UpdateTitleBar(root.ActualTheme);
+        }
 
         _ = InitializeAsync();
     }
@@ -233,8 +239,10 @@ public sealed partial class VideoResourcesWindow : Window, INotifyPropertyChange
         var tb = playerWindow.AppWindow.TitleBar;
         tb.ButtonForegroundColor = Colors.White;
         tb.ButtonHoverForegroundColor = Colors.White;
-        tb.ButtonHoverBackgroundColor = Colors.DarkGray;
+        tb.ButtonPressedForegroundColor = Colors.White;
         tb.ButtonBackgroundColor = Colors.Transparent;
+        tb.ButtonHoverBackgroundColor = Color.FromArgb(255,45,45,45);
+        tb.ButtonPressedBackgroundColor = Color.FromArgb(255,38,38,38);
 
         var rootGrid = new Grid();
         rootGrid.Background = new SolidColorBrush(Colors.Black);
@@ -339,6 +347,31 @@ public sealed partial class VideoResourcesWindow : Window, INotifyPropertyChange
             {
                 IsLoading = false;
             }
+        }
+    }
+
+    private void Root_ActualThemeChanged(FrameworkElement sender, object args)
+    {
+        UpdateTitleBar(sender.ActualTheme);
+    }
+
+    private void UpdateTitleBar(ElementTheme theme)
+    {
+        var tb = AppWindow.TitleBar;
+
+        if (theme == ElementTheme.Dark)
+        {
+            tb.ButtonForegroundColor = Colors.White;
+            tb.ButtonHoverForegroundColor = Colors.White;
+            tb.ButtonHoverBackgroundColor = ColorHelper.FromArgb(255, 45, 45, 45);
+            tb.ButtonPressedBackgroundColor = ColorHelper.FromArgb(255, 38, 38, 38);
+        }
+        else
+        {
+            tb.ButtonForegroundColor = Colors.Black;
+            tb.ButtonHoverForegroundColor = Colors.Black;
+            tb.ButtonHoverBackgroundColor = ColorHelper.FromArgb(255, 232, 232, 232);
+            tb.ButtonPressedBackgroundColor = ColorHelper.FromArgb(255, 210, 210, 210);
         }
     }
 }

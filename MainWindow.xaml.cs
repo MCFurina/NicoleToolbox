@@ -157,11 +157,15 @@ namespace NicoleToolbox
             {
                 tb.ButtonForegroundColor = Colors.White;
                 tb.ButtonHoverForegroundColor = Colors.White;
+                tb.ButtonHoverBackgroundColor = ColorHelper.FromArgb(255, 45, 45, 45);
+                tb.ButtonPressedBackgroundColor = ColorHelper.FromArgb(255, 38, 38, 38);
             }
             else
             {
                 tb.ButtonForegroundColor = Colors.Black;
                 tb.ButtonHoverForegroundColor = Colors.Black;
+                tb.ButtonHoverBackgroundColor = ColorHelper.FromArgb(255, 232, 232, 232);
+                tb.ButtonPressedBackgroundColor = ColorHelper.FromArgb(255, 210, 210, 210);
             }
         }
     }
