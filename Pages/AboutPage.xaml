@@ -13,6 +13,9 @@
         <TextBlock Text="关于" FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0"/>
         <TextBlock Text="尼可工具箱" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-100,0,0"/>
         <TextBlock Text="提供一些原神实用工具" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0"/>
-        <HyperlinkButton Content="GitHub" NavigateUri="https://github.com/MCFurina/NicoleToolbox/" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,100,0,0"/>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,100,0,0">
+            <HyperlinkButton Content="GitHub" NavigateUri="https://github.com/MCFurina/NicoleToolbox/" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <HyperlinkButton Content="报告问题" NavigateUri="https://github.com/MCFurina/NicoleToolbox/issues" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </StackPanel>
     </Grid>
 </Page>
