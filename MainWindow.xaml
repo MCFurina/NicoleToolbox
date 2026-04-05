@@ -68,7 +68,7 @@
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Content="更多工具推荐" Tag="More">
+                <NavigationViewItem Content="更多" Tag="More">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="/Assets/Fonts/SegoeIcons.ttf#Segoe Fluent Icons" Glyph="&#xE712;" />
                     </NavigationViewItem.Icon>

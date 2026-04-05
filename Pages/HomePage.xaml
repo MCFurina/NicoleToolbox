@@ -11,11 +11,5 @@
     <Grid>
         <TextBlock Text="主页" FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0"/>
         <TextBlock Text="欢迎进入尼可工具箱，功能集合都在这里" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,120,0,0"/>
-        <Button Click="OpenVideoWindow" Width="400" Height="100" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="25,0,0,100">
-            <Grid>
-                <TextBlock Text="视频资源库" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
-                <TextBlock Text="浏览过场动画与角色视频并可以直接下载" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"  Foreground="Gray"/>
-            </Grid>
-        </Button>
     </Grid>
 </Page>

@@ -29,22 +29,10 @@ namespace NicoleToolbox
             InitializeComponent();
         }
 
-        private async void Button1(object sender, RoutedEventArgs e)
+        private void OpenVideoWindow(object sender, RoutedEventArgs e)
         {
-            var uri = new System.Uri("https://philia093.xyz/");
-            await Launcher.LaunchUriAsync(uri);
-        }
-
-        private async void Button2(object sender, RoutedEventArgs e)
-        {
-            var uri = new System.Uri("https://www.bettergi.com/");
-            await Launcher.LaunchUriAsync(uri);
-        }
-
-        private async void Button3(object sender, RoutedEventArgs e)
-        {
-            var uri = new System.Uri("https://v3.yuanshen.site/");
-            await Launcher.LaunchUriAsync(uri);
+            VideoResourcesWindow videoWindow = new VideoResourcesWindow();
+            videoWindow.Activate();
         }
     }
 }

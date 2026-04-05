@@ -9,30 +9,14 @@
     mc:Ignorable="d">
 
     <Grid>
-        <TextBlock Text="更多工具推荐" FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0"/>
-        <Button Width="500" Height="100" Click="Button1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,120,0,0">
-            <StackPanel Orientation="Vertical">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="芙芙启动器" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                </StackPanel>
-                <TextBlock Text="专为PC端原神玩家打造的多功能启动器" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gray"/>
-            </StackPanel>
-        </Button>
-        <Button Width="500" Height="100" Click="Button2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,230,0,0">
-            <StackPanel Orientation="Vertical">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="BetterGI" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                </StackPanel>
-                <TextBlock Text="可自动执行一些任务，让原神变的更好" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gray"/>
-            </StackPanel>
-        </Button>
-        <Button Width="500" Height="100" Click="Button3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,340,0,0">
-            <StackPanel Orientation="Vertical">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="空荧酒馆地图" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                </StackPanel>
-                <TextBlock Text="也是一个网页版原神地图，似乎比官方做的更好？" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gray"/>
-            </StackPanel>
-        </Button>
+        <TextBlock Text="更多" FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0"/>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,120,0,0" Spacing="10">
+            <Button Click="OpenVideoWindow" Width="400" Height="100">
+                <Grid>
+                    <TextBlock Text="视频资源库" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
+                    <TextBlock Text="浏览原神所有的角色视频与过场动画，并可以直接下载" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"  Foreground="Gray"/>
+                </Grid>
+            </Button>
+        </StackPanel>
     </Grid>
 </Page>
