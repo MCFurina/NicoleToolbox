@@ -11,10 +11,10 @@
     <Grid>
         <TextBlock Text="更多" FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0"/>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,120,0,0" Spacing="10">
-            <Button Click="OpenVideoWindow" Width="400" Height="100">
+            <Button Width="400" Height="100">
                 <Grid>
-                    <TextBlock Text="视频资源库" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
-                    <TextBlock Text="浏览原神所有的角色视频与过场动画，并可以直接下载" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"  Foreground="Gray"/>
+                    <TextBlock Text="空按钮" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
+                    <TextBlock Text="空按钮" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"  Foreground="Gray"/>
                 </Grid>
             </Button>
         </StackPanel>

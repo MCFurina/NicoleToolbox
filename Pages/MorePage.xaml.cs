@@ -28,11 +28,5 @@ namespace NicoleToolbox
         {
             InitializeComponent();
         }
-
-        private void OpenVideoWindow(object sender, RoutedEventArgs e)
-        {
-            VideoResourcesWindow videoWindow = new VideoResourcesWindow();
-            videoWindow.Activate();
-        }
     }
 }

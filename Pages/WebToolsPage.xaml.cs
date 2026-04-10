@@ -21,9 +21,9 @@ namespace NicoleToolbox
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class EnkaPage : Page
+    public sealed partial class WebToolsPage : Page
     {
-        public EnkaPage()
+        public WebToolsPage()
         {
             InitializeComponent();
         }

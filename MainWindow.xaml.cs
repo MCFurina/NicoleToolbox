@@ -79,26 +79,8 @@ namespace NicoleToolbox
                     case "Home":
                         ContentFrame?.Navigate(typeof(HomePage));
                         break;
-                    case "Map":
-                        ContentFrame?.Navigate(typeof(MapPage));
-                        break;
-                    case "WebMap":
-                        ContentFrame?.Navigate(typeof(WebMapPage));
-                        break;
-                    case "Calc":
-                        ContentFrame?.Navigate(typeof(CalcPage));
-                        break;
-                    case "Wiki":
-                        ContentFrame?.Navigate(typeof(WikiPage));
-                        break;
-                    case "Lineup":
-                        ContentFrame?.Navigate(typeof(LineupPage));
-                        break;
-                    case "Enka":
-                        ContentFrame?.Navigate(typeof(EnkaPage));
-                        break;
-                    case "GameAnnouncement":
-                        ContentFrame?.Navigate(typeof(GameAnnouncementPage));
+                    case "WebTools":
+                        ContentFrame?.Navigate(typeof(WebToolsPage));
                         break;
                     case "More":
                         ContentFrame?.Navigate(typeof(MorePage));
@@ -132,13 +114,7 @@ namespace NicoleToolbox
                     bool isMatch = currentPageType switch
                     {
                         System.Type t when t == typeof(HomePage) => tag == "Home",
-                        System.Type t when t == typeof(MapPage) => tag == "Map",
-                        System.Type t when t == typeof(WebMapPage) => tag == "WebMap",
-                        System.Type t when t == typeof(CalcPage) => tag == "Calc",
-                        System.Type t when t == typeof(WikiPage) => tag == "Wiki",
-                        System.Type t when t == typeof(LineupPage) => tag == "Lineup",
-                        System.Type t when t == typeof(EnkaPage) => tag == "Enka",
-                        System.Type t when t == typeof(GameAnnouncementPage) => tag == "GameAnnouncement",
+                        System.Type t when t == typeof(WebToolsPage) => tag == "WebTools",
                         System.Type t when t == typeof(MorePage) => tag == "More",
                         System.Type t when t == typeof(AboutPage) => tag == "About",
                         System.Type t when t == typeof(SettingsPage) => tag == "Settings",

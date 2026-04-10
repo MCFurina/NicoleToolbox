@@ -26,45 +26,9 @@
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Content="所有地区" Tag="Map">
+                <NavigationViewItem Content="百宝箱" Tag="WebTools">
                     <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="/Assets/Fonts/SegoeIcons.ttf#Segoe Fluent Icons" Glyph="&#xECAF;" />
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                
-                <NavigationViewItem Content="在线地图" Tag="WebMap">
-                    <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="/Assets/Fonts/SegoeIcons.ttf#Segoe Fluent Icons" Glyph="&#xE800;" />
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-
-                <NavigationViewItem Content="养成计算器" Tag="Calc">
-                    <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="/Assets/Fonts/SegoeIcons.ttf#Segoe Fluent Icons" Glyph="&#xE8EF;" />
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-
-                <NavigationViewItem Content="观测枢" Tag="Wiki">
-                    <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="/Assets/Fonts/SegoeIcons.ttf#Segoe Fluent Icons" Glyph="&#xE82D;" />
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-
-                <NavigationViewItem Content="阵容广场" Tag="Lineup">
-                    <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="/Assets/Fonts/SegoeIcons.ttf#Segoe Fluent Icons" Glyph="&#xE716;" />
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-
-                <NavigationViewItem Content="UID角色查询" Tag="Enka">
-                    <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="/Assets/Fonts/SegoeIcons.ttf#Segoe Fluent Icons" Glyph="&#xED37;" />
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-
-                <NavigationViewItem Content="游戏公告" Tag="GameAnnouncement">
-                    <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="/Assets/Fonts/SegoeIcons.ttf#Segoe Fluent Icons" Glyph="&#xE789;" />
+                        <FontIcon FontFamily="/Assets/Fonts/SegoeIcons.ttf#Segoe Fluent Icons" Glyph="&#xECAA;" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
