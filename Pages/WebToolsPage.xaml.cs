@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Diagnostics;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -26,6 +27,26 @@ namespace NicoleToolbox
         public WebToolsPage()
         {
             InitializeComponent();
+        }
+
+        private void Map(object sender, RoutedEventArgs e)
+        {
+            Process.Start("explorer.exe","https://act.mihoyo.com/ys/app/interactive-map/index.html");
+        }
+
+        private void Calc(object sender, RoutedEventArgs e)
+        {
+            Process.Start("explorer.exe","https://act.mihoyo.com/ys/event/calculator/index.html");
+        }
+
+        private void Lineup(object sender, RoutedEventArgs e)
+        {
+            Process.Start("explorer.exe","https://webstatic.mihoyo.com/ys/event/lineup-fe/index.html");
+        }
+
+        private void Wiki(object sender, RoutedEventArgs e)
+        {
+            Process.Start("explorer.exe","https://baike.mihoyo.com/ys/obc");
         }
     }
 }
