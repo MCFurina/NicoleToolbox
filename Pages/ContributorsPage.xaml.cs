@@ -7,10 +7,10 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using System.Diagnostics;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -22,26 +22,21 @@ namespace NicoleToolbox
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class AboutPage : Page
+    public sealed partial class ContributorsPage : Page
     {
-        public AboutPage()
+        public ContributorsPage()
         {
             InitializeComponent();
         }
 
-        private void GitHub(object sender, RoutedEventArgs e)
+        private void Back(object sender, RoutedEventArgs e)
         {
-            Process.Start("explorer.exe", "https://github.com/MCFurina/NicoleToolbox/");
+            Frame.Navigate(typeof(AboutPage));
         }
 
-        private void Issue(object sender, RoutedEventArgs e)
+        private void MCFurina(object sender, RoutedEventArgs e)
         {
-            Process.Start("explorer.exe", "https://github.com/MCFurina/NicoleToolbox/issues/");
-        }
-
-        private void Contributors(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(ContributorsPage));
+            Process.Start("explorer.exe", "https://github.com/MCFurina");
         }
     }
 }
