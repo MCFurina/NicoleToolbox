@@ -23,24 +23,6 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
-      - name: Publish-x86
-        run: |
-          dotnet publish NicoleToolbox.csproj -c Release -o publish-x86 -a x86 --no-self-contained /m
-
-      - name: Zip-x86
-        run: |
-          $zipName = "NicoleToolbox-${{ github.run_number }}-x86.zip"
-          Compress-Archive -Path publish-x86/* -DestinationPath $zipName
-
-      - name: Release-x86
-        uses: softprops/action-gh-release@v2
-        with:
-          name: "Dev Release #${{ github.run_number }}"
-          tag_name: dev-${{ github.run_number }}
-          files: NicoleToolbox-${{ github.run_number }}-x86.zip
-          prerelease: false
-          token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Publish-x64
         run: |
           dotnet publish NicoleToolbox.csproj -c Release -o publish-x64 -a x64 --no-self-contained /m
@@ -59,20 +41,20 @@ jobs:
           prerelease: false
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Publish-arm64
+      - name: Publish-x64-SelfContained
         run: |
-          dotnet publish NicoleToolbox.csproj -c Release -o publish-arm64 -a arm64 --no-self-contained /m
+          dotnet publish NicoleToolbox.csproj -c Release -o publish-x64-selfcontained -a x64 --self-contained true /m
 
-      - name: Zip-arm64
+      - name: Zip-x64-SelfContained
         run: |
-          $zipName = "NicoleToolbox-${{ github.run_number }}-arm64.zip"
-          Compress-Archive -Path publish-arm64/* -DestinationPath $zipName
+          $zipName = "NicoleToolbox-${{ github.run_number }}-x64-selfcontained.zip"
+          Compress-Archive -Path publish-x64-selfcontained/* -DestinationPath $zipName
 
-      - name: Release-arm64
+      - name: Release-x64-SelfContained
         uses: softprops/action-gh-release@v2
         with:
           name: "Dev Release #${{ github.run_number }}"
           tag_name: dev-${{ github.run_number }}
-          files: NicoleToolbox-${{ github.run_number }}-arm64.zip
+          files: NicoleToolbox-${{ github.run_number }}-x64-selfcontained.zip
           prerelease: false
           token: ${{ secrets.GITHUB_TOKEN }}

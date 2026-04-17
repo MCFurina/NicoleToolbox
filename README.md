@@ -13,3 +13,6 @@ SDK 和 .NET 桌面运行时均可运行本应用！但是更推荐安装 SDK，
 应用 .zip 压缩文件可从 GitHub Releases 下载！  
 [点击前往下载](https://github.com/MCFurina/NicoleToolbox/releases)  
 下载完成后，解压文件，双击 NicoleToolbox.exe 即可运行！  
+
+提示：你可以下载文件名带有"-selfcontained"的版本，无需安装 .NET，因为 .NET 已经在里面了。  
+但是我不推荐你使用，因为体积大，以及运行其他.NET程序仍然需要安装 .NET，直接安装 .NET，一劳永逸！  
