@@ -13,14 +13,14 @@
         <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,120,0,0" Spacing="10">
             <Button Width="400" Height="100" Click="winver">
                 <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xF034;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    <FontIcon Glyph="&#xF034;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     <TextBlock Text="查看 Windows 系统版本" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
                     <TextBlock Text="快捷查看版本号" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
                 </Grid>
             </Button>
             <Button Width="400" Height="100" Click="msinfo32">
                 <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE946;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    <FontIcon Glyph="&#xE946;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     <TextBlock Text="查看系统信息" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
                     <TextBlock Text="超级全，比设置应用的更全面" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
                 </Grid>

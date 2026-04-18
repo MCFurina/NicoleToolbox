@@ -9,13 +9,17 @@
     mc:Ignorable="d">
 
     <Grid>
-        <Button Click="Back" Height="50" Width="200" VerticalAlignment="Top" HorizontalAlignment="Left">
-            <Grid Width="170">
-                <FontIcon Glyph="&#xE72B;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                <TextBlock Text="返回关于" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Border VerticalAlignment="Top" HorizontalAlignment="Stretch" BorderThickness="0,0,0,1" BorderBrush="Gray">
+            <Grid>
+                <Button Click="Back" Height="50" Width="200" HorizontalAlignment="Left">
+                    <Grid Width="170">
+                        <FontIcon Glyph="&#xE72B;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <TextBlock Text="返回关于" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Grid>
+                </Button>
+                <TextBlock Text="贡献者" FontSize="38" HorizontalAlignment="Center"/>
             </Grid>
-        </Button>
-        <TextBlock Text="贡献者" FontSize="35" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        </Border>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,120,0,0" Spacing="10">
             <Button Width="400" Height="100" Click="MCFurina">
                 <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">

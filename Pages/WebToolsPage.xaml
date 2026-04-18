@@ -13,28 +13,28 @@
         <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,120,0,0" Spacing="10">
             <Button Width="400" Height="100" Click="Map">
                 <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE800;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    <FontIcon Glyph="&#xE800;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     <TextBlock Text="提瓦特在线地图" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
                     <TextBlock Text="原神官方地图工具" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
                 </Grid>
             </Button>
             <Button Width="400" Height="100" Click="Calc">
                 <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE8EF;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    <FontIcon Glyph="&#xE8EF;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     <TextBlock Text="养成计算器" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
                     <TextBlock Text="原神官方养成计算器" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
                 </Grid>
             </Button>
             <Button Width="400" Height="100" Click="Lineup">
                 <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE716;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    <FontIcon Glyph="&#xE716;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     <TextBlock Text="配队分享" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
                     <TextBlock Text="原神官方配队分享社区" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
                 </Grid>
             </Button>
             <Button Width="400" Height="100" Click="Wiki">
                 <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE82D;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    <FontIcon Glyph="&#xE82D;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     <TextBlock Text="观测枢" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
                     <TextBlock Text="原神官方Wiki，内容由玩家编写" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
                 </Grid>
