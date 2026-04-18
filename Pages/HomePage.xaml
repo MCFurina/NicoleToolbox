@@ -9,7 +9,16 @@
     mc:Ignorable="d">
 
     <Grid>
-        <TextBlock Text="主页" FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0"/>
-        <TextBlock Text="欢迎进入尼可工具箱" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,120,0,0"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/home_background.png" Stretch="UniformToFill" AlignmentX="Center" AlignmentY="Center"/>
+        </Grid.Background>
+        <TextBlock Text="主页" FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0" RequestedTheme="Dark"/>
+        <TextBlock Text="欢迎进入尼可工具箱" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,120,0,0" RequestedTheme="Dark"/>
+        <Button Click="About" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="200" Height="40" RequestedTheme="Light">
+            <Grid Width="170">
+                <FontIcon Glyph="&#xE946;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <TextBlock Text="关于本应用" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Grid>
+        </Button>
     </Grid>
 </Page>

@@ -30,5 +30,10 @@ namespace NicoleToolbox
         {
             InitializeComponent();
         }
+
+        private void About(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AboutPage));
+        }
     }
 }
