@@ -6,7 +6,7 @@
     xmlns:local="using:NicoleToolbox"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" RequestedTheme="Light" Background="LightGray">
+    mc:Ignorable="d" RequestedTheme="Light">
 
     <Grid>
         <Grid.Background>
