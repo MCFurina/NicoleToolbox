@@ -13,7 +13,7 @@
             <ImageBrush ImageSource="/Assets/about_background.png" Stretch="UniformToFill" AlignmentX="Center" AlignmentY="Center"/>
         </Grid.Background>
         <TextBlock Text="关于" FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0"/>
-        <Image Source="/Assets/Logo.ico" Width="64" Height="64" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-300,0,0"/>
+        <Image Source="/Assets/logo.png" Width="128" Height="128" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,300"/>
         <Border Background="#CCFFFFFF" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="8" CornerRadius="8">
             <StackPanel Orientation="Vertical" Spacing="8">
                 <TextBlock Text="尼可工具箱" FontSize="30" HorizontalAlignment="Center"/>

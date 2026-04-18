@@ -10,6 +10,6 @@
 
     <Grid>
         <TextBlock Text="主页" FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0"/>
-        <TextBlock Text="欢迎进入尼可工具箱，功能集合都在这里" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,120,0,0"/>
+        <TextBlock Text="欢迎进入尼可工具箱" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,120,0,0"/>
     </Grid>
 </Page>
