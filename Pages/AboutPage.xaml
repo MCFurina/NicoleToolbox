@@ -40,6 +40,12 @@
                     <TextBlock Text="贡献者" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Grid>
             </Button>
+            <Button Click="Website" Width="250" Height="40">
+                <Grid Width="220">
+                    <FontIcon Glyph="&#xE774;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    <TextBlock Text="官方网站" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Grid>
+            </Button>
         </StackPanel>
     </Grid>
 </Page>

@@ -43,5 +43,10 @@ namespace NicoleToolbox
         {
             Frame.Navigate(typeof(ContributorsPage));
         }
+
+        private void Website(object sender, RoutedEventArgs e)
+        {
+            Process.Start("explorer.exe", "https://mcfurina.github.io/NicoleToolbox/");
+        }
     }
 }
