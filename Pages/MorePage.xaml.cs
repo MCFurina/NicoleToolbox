@@ -35,9 +35,9 @@ namespace NicoleToolbox
             Process.Start("winver.exe");
         }
 
-        private void msinfo32(object sender, RoutedEventArgs e)
+        private void systeminfo(object sender, RoutedEventArgs e)
         {
-            Process.Start("msinfo32.exe");
+            Process.Start("explorer.exe", "ms-settings:about");
         }
     }
 }

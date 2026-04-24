@@ -18,11 +18,11 @@
                     <TextBlock Text="快捷查看版本号" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
                 </Grid>
             </Button>
-            <Button Width="400" Height="100" Click="msinfo32">
+            <Button Width="400" Height="100" Click="systeminfo">
                 <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
                     <FontIcon Glyph="&#xE946;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     <TextBlock Text="查看系统信息" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
-                    <TextBlock Text="超级全，比设置应用的更全面" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
+                    <TextBlock Text="点击跳转到设置应用查看系统信息" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
                 </Grid>
             </Button>
         </StackPanel>
