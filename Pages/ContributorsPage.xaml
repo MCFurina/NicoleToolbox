@@ -12,7 +12,7 @@
         <Border VerticalAlignment="Top" HorizontalAlignment="Stretch" BorderThickness="0,0,0,1" BorderBrush="Gray">
             <Grid>
                 <Button Click="Back" Height="50" Width="200" HorizontalAlignment="Left">
-                    <Grid Width="170">
+                    <Grid Width="180">
                         <FontIcon Glyph="&#xE72B;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                         <TextBlock Text="返回关于" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Grid>
@@ -21,7 +21,7 @@
             </Grid>
         </Border>
         <ScrollViewer Margin="0,52,0,0">
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,0,0,0" Spacing="10">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0" Spacing="10">
                 <Button Width="400" Height="100" Click="MCFurina">
                     <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
                         <Image Source="https://avatars.githubusercontent.com/u/96320440" VerticalAlignment="Center" HorizontalAlignment="Left"/>
