@@ -20,14 +20,16 @@
                 <TextBlock Text="贡献者" FontSize="38" HorizontalAlignment="Center"/>
             </Grid>
         </Border>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,120,0,0" Spacing="10">
-            <Button Width="400" Height="100" Click="MCFurina">
-                <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <Image Source="https://avatars.githubusercontent.com/u/96320440" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                    <TextBlock Text="MCFurina" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
-                    <TextBlock Text="本应用作者" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
-                </Grid>
-            </Button>
-        </StackPanel>
+        <ScrollViewer Margin="0,52,0,0">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,0,0,0" Spacing="10">
+                <Button Width="400" Height="100" Click="MCFurina">
+                    <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Image Source="https://avatars.githubusercontent.com/u/96320440" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <TextBlock Text="MCFurina" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
+                        <TextBlock Text="本应用作者" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
+                    </Grid>
+                </Button>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

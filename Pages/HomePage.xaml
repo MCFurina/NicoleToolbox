@@ -11,12 +11,20 @@
     <Grid>
         <TextBlock Text="主页" FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0"/>
         <TextBlock Text="你好，欢迎使用尼可工具箱！" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,120,0,0"/>
-        <Button Click="WebTools" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="300" Height="40" Margin="25,0,0,50">
-            <Grid Width="280">
-                <FontIcon Glyph="&#xECAA;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                <TextBlock Text="点击打开百宝箱！" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            </Grid>
-        </Button>
+        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="25,0,0,50" Orientation="Vertical" Spacing="8">
+            <Button Click="WebTools" Width="300" Height="40">
+                <Grid Width="280">
+                    <FontIcon Glyph="&#xECAA;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    <TextBlock Text="点击打开百宝箱！" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Grid>
+            </Button>
+            <Button Click="More" Width="300" Height="40">
+                <Grid Width="280">
+                    <FontIcon Glyph="&#xE712;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    <TextBlock Text="Windows快捷功能！" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Grid>
+            </Button>
+        </StackPanel>
         <Button Click="About" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="200" Height="40" Margin="0,0,25,50">
             <Grid Width="180">
                 <FontIcon Glyph="&#xE946;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
