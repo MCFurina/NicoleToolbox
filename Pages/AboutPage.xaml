@@ -6,17 +6,14 @@
     xmlns:local="using:NicoleToolbox"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" RequestedTheme="Light">
+    mc:Ignorable="d">
 
     <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/Assets/Images/about_background.png" Stretch="UniformToFill" AlignmentX="Center" AlignmentY="Center"/>
-        </Grid.Background>
         <TextBlock Text="关于" FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0"/>
         <ScrollViewer Margin="0,120,0,0">
             <Grid MinHeight="500">
                 <Image Source="/Assets/Images/logo.png" Width="128" Height="128" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,500"/>
-                <Border Background="#ccffffff" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,120" Padding="8" CornerRadius="8">
+                <Border VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,120" Padding="8" CornerRadius="8">
                     <StackPanel Orientation="Vertical" Spacing="8">
                         <TextBlock Text="尼可工具箱" FontSize="30" HorizontalAlignment="Center"/>
                         <TextBlock Text="一个原神工具箱，集成了一些在线工具，基于 WinUI 3 制作" FontSize="20" HorizontalAlignment="Center"/>
