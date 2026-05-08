@@ -13,7 +13,7 @@
         <Pivot Margin="0,100,0,0">
             <PivotItem Header="原神">
                 <ScrollViewer Margin="0,20,0,0">
-                    <GridView HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <GridView HorizontalAlignment="Center" VerticalAlignment="Top" SelectionMode="None">
                         <Button Width="400" Height="100" Click="Map">
                             <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
                                 <FontIcon Glyph="&#xE800;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
@@ -47,7 +47,7 @@
             </PivotItem>
             <PivotItem Header="Windows">
                 <ScrollViewer Margin="0,20,0,0">
-                    <GridView HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <GridView HorizontalAlignment="Center" VerticalAlignment="Top" SelectionMode="None">
                         <Button Width="400" Height="100" Click="winver">
                             <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
                                 <FontIcon Glyph="&#xF034;" VerticalAlignment="Center" HorizontalAlignment="Left"/>

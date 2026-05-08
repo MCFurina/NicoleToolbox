@@ -21,7 +21,7 @@
             </Grid>
         </Border>
         <ScrollViewer Margin="0,52,0,0">
-            <GridView HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,25,0,0">
+            <GridView HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,25,0,0" SelectionMode="None">
                 <Button Width="400" Height="100" Click="MCFurina">
                     <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
                         <Image Source="https://avatars.githubusercontent.com/u/96320440" VerticalAlignment="Center" HorizontalAlignment="Left"/>
