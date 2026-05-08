@@ -9,19 +9,19 @@
     mc:Ignorable="d">
 
     <Grid>
-        <Border VerticalAlignment="Top" HorizontalAlignment="Stretch" BorderThickness="0,0,0,1" BorderBrush="Gray">
+        <Border VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="50">
             <Grid>
-                <Button Click="Back" Height="50" Width="200" HorizontalAlignment="Left">
-                    <Grid Width="180">
-                        <FontIcon Glyph="&#xE72B;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                        <TextBlock Text="返回关于" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    </Grid>
+                <Button Click="Back" HorizontalAlignment="Left" VerticalAlignment="Center" Height="50">
+                    <StackPanel Orientation="Horizontal" Spacing="10">
+                        <FontIcon Glyph="&#xE72B;" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <TextBlock Text="返回关于" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
                 </Button>
-                <TextBlock Text="贡献者" FontSize="38" HorizontalAlignment="Center"/>
+                <TextBlock Text="贡献者" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Grid>
         </Border>
         <ScrollViewer Margin="0,52,0,0">
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0" Spacing="10">
+            <GridView HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,25,0,0">
                 <Button Width="400" Height="100" Click="MCFurina">
                     <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
                         <Image Source="https://avatars.githubusercontent.com/u/96320440" VerticalAlignment="Center" HorizontalAlignment="Left"/>
@@ -29,7 +29,7 @@
                         <TextBlock Text="本应用作者" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
                     </Grid>
                 </Button>
-            </StackPanel>
+            </GridView>
         </ScrollViewer>
     </Grid>
 </Page>

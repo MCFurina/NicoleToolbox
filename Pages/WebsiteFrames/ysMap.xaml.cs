@@ -7,37 +7,35 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.System;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
-namespace NicoleToolbox
+namespace NicoleToolbox.Pages.WebsiteFrames
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MorePage : Page
+    public sealed partial class ysMap : Page
     {
-        public MorePage()
+        public ysMap()
         {
             InitializeComponent();
         }
 
-        private void winver(object sender, RoutedEventArgs e)
+        private void Back(object sender, RoutedEventArgs e)
         {
-            Process.Start("winver.exe");
+            Frame.Navigate(typeof(WebToolsPage));
         }
 
-        private void systeminfo(object sender, RoutedEventArgs e)
+        private void Reload(object sender, RoutedEventArgs e)
         {
-            Process.Start("explorer.exe", "ms-settings:about");
+            WebView2.Reload();
         }
     }
 }

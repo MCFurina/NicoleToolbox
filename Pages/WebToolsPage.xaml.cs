@@ -4,13 +4,15 @@ using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Media.Animation;
 using Microsoft.UI.Xaml.Navigation;
+using NicoleToolbox.Pages.WebsiteFrames;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using System.Diagnostics;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -31,7 +33,7 @@ namespace NicoleToolbox
 
         private void Map(object sender, RoutedEventArgs e)
         {
-            Process.Start("explorer.exe","https://act.mihoyo.com/ys/app/interactive-map/index.html");
+            Frame.Navigate(typeof(ysMap));
         }
 
         private void Calc(object sender, RoutedEventArgs e)
@@ -47,6 +49,16 @@ namespace NicoleToolbox
         private void Wiki(object sender, RoutedEventArgs e)
         {
             Process.Start("explorer.exe","https://baike.mihoyo.com/ys/obc");
+        }
+
+        private void winver(object sender, RoutedEventArgs e)
+        {
+            Process.Start("winver.exe");
+        }
+
+        private void systeminfo(object sender, RoutedEventArgs e)
+        {
+            Process.Start("explorer.exe", "ms-settings:about");
         }
     }
 }

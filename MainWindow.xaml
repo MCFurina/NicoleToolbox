@@ -32,12 +32,6 @@
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Content="更多" Tag="More">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE712;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-
                 <NavigationViewItem Content="关于" Tag="About">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE946;"/>

@@ -40,10 +40,5 @@ namespace NicoleToolbox
         {
             Frame.Navigate(typeof(WebToolsPage));
         }
-
-        private void More(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(MorePage));
-        }
     }
 }

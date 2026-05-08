@@ -82,9 +82,6 @@ namespace NicoleToolbox
                     case "WebTools":
                         ContentFrame?.Navigate(typeof(WebToolsPage));
                         break;
-                    case "More":
-                        ContentFrame?.Navigate(typeof(MorePage));
-                        break;
                     case "About":
                         ContentFrame?.Navigate(typeof(AboutPage));
                         break;
@@ -115,7 +112,6 @@ namespace NicoleToolbox
                     {
                         System.Type t when t == typeof(HomePage) => tag == "Home",
                         System.Type t when t == typeof(WebToolsPage) => tag == "WebTools",
-                        System.Type t when t == typeof(MorePage) => tag == "More",
                         System.Type t when t == typeof(AboutPage) => tag == "About",
                         System.Type t when t == typeof(SettingsPage) => tag == "Settings",
                         _ => false
