@@ -31,9 +31,29 @@ namespace NicoleToolbox
             InitializeComponent();
         }
 
+        // 切换逻辑
+        private void selectorbar_SelectionChanged(SelectorBar sender, SelectorBarSelectionChangedEventArgs args)
+        {
+            SelectorBarItem selectedItem = sender.SelectedItem;
+            int currentSelectedIndex = sender.Items.IndexOf(selectedItem);
+
+            switch (currentSelectedIndex)
+            {
+                case 0:
+                    grid0.Visibility = Visibility.Visible;
+                    grid1.Visibility = Visibility.Collapsed;
+                    break;
+                case 1:
+                    grid1.Visibility = Visibility.Visible;
+                    grid0.Visibility = Visibility.Collapsed;
+                    break;
+            }
+        }
+
         private void Map(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ysMap));
+            GIMapWindow mapWindow = new GIMapWindow();
+            mapWindow.Activate();
         }
 
         private void Calc(object sender, RoutedEventArgs e)

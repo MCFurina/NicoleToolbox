@@ -25,10 +25,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Pages\WebsiteFrames\ysMap.xaml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
 
@@ -46,11 +42,6 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.28000.1839" />
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="2.0.1" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Pages\WebsiteFrames\ysMap.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
 	
   <!--

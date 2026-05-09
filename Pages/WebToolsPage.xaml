@@ -10,61 +10,63 @@
 
     <Grid>
         <TextBlock Text="百宝箱" FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0"/>
-        <Pivot Margin="0,100,0,0">
-            <PivotItem Header="原神">
-                <ScrollViewer Margin="0,20,0,0">
-                    <GridView HorizontalAlignment="Center" VerticalAlignment="Top" SelectionMode="None">
-                        <Button Width="400" Height="100" Click="Map">
-                            <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
-                                <FontIcon Glyph="&#xE800;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                                <TextBlock Text="提瓦特在线地图" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
-                                <TextBlock Text="原神官方地图工具" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
-                            </Grid>
-                        </Button>
-                        <Button Width="400" Height="100" Click="Calc">
-                            <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
-                                <FontIcon Glyph="&#xE8EF;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                                <TextBlock Text="养成计算器" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
-                                <TextBlock Text="原神官方养成计算器" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
-                            </Grid>
-                        </Button>
-                        <Button Width="400" Height="100" Click="Lineup">
-                            <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
-                                <FontIcon Glyph="&#xE716;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                                <TextBlock Text="配队分享" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
-                                <TextBlock Text="原神官方配队分享社区" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
-                            </Grid>
-                        </Button>
-                        <Button Width="400" Height="100" Click="Wiki">
-                            <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
-                                <FontIcon Glyph="&#xE82D;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                                <TextBlock Text="观测枢" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
-                                <TextBlock Text="原神官方Wiki，内容由玩家编写" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
-                            </Grid>
-                        </Button>
-                    </GridView>
-                </ScrollViewer>
-            </PivotItem>
-            <PivotItem Header="Windows">
-                <ScrollViewer Margin="0,20,0,0">
-                    <GridView HorizontalAlignment="Center" VerticalAlignment="Top" SelectionMode="None">
-                        <Button Width="400" Height="100" Click="winver">
-                            <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
-                                <FontIcon Glyph="&#xF034;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                                <TextBlock Text="查看 Windows 系统版本" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
-                                <TextBlock Text="快捷查看版本号" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
-                            </Grid>
-                        </Button>
-                        <Button Width="400" Height="100" Click="systeminfo">
-                            <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
-                                <FontIcon Glyph="&#xE946;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                                <TextBlock Text="查看系统信息" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
-                                <TextBlock Text="点击跳转到设置应用查看系统信息" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
-                            </Grid>
-                        </Button>
-                    </GridView>
-                </ScrollViewer>
-            </PivotItem>
-        </Pivot>
+        <SelectorBar SelectionChanged="selectorbar_SelectionChanged" Margin="0,100,0,0">
+            <SelectorBarItem Text="原神" IsSelected="True"/>
+            <SelectorBarItem Text="Windows"/>
+        </SelectorBar>
+        <Grid x:Name="grid0" Margin="0,160,0,0">
+            <ScrollViewer>
+                <GridView HorizontalAlignment="Center" VerticalAlignment="Top" SelectionMode="None">
+                    <Button Width="400" Height="100" Click="Map">
+                        <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <FontIcon Glyph="&#xE800;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                            <TextBlock Text="提瓦特在线地图" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
+                            <TextBlock Text="原神官方地图工具" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
+                        </Grid>
+                    </Button>
+                    <Button Width="400" Height="100" Click="Calc">
+                        <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <FontIcon Glyph="&#xE8EF;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                            <TextBlock Text="养成计算器" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
+                            <TextBlock Text="原神官方养成计算器" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
+                        </Grid>
+                    </Button>
+                    <Button Width="400" Height="100" Click="Lineup">
+                        <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <FontIcon Glyph="&#xE716;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                            <TextBlock Text="配队分享" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
+                            <TextBlock Text="原神官方配队分享社区" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
+                        </Grid>
+                    </Button>
+                    <Button Width="400" Height="100" Click="Wiki">
+                        <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <FontIcon Glyph="&#xE82D;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                            <TextBlock Text="观测枢" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
+                            <TextBlock Text="原神官方Wiki，内容由玩家编写" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
+                        </Grid>
+                    </Button>
+                </GridView>
+            </ScrollViewer>
+        </Grid>
+        <Grid x:Name="grid1" Margin="0,160,0,0">
+            <ScrollViewer>
+                <GridView HorizontalAlignment="Center" VerticalAlignment="Top" SelectionMode="None">
+                    <Button Width="400" Height="100" Click="winver">
+                        <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <FontIcon Glyph="&#xF034;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                            <TextBlock Text="查看 Windows 系统版本" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
+                            <TextBlock Text="快捷查看版本号" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
+                        </Grid>
+                    </Button>
+                    <Button Width="400" Height="100" Click="systeminfo">
+                        <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <FontIcon Glyph="&#xE946;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                            <TextBlock Text="查看系统信息" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
+                            <TextBlock Text="点击跳转到设置应用查看系统信息" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
+                        </Grid>
+                    </Button>
+                </GridView>
+            </ScrollViewer>
+        </Grid>
     </Grid>
 </Page>
