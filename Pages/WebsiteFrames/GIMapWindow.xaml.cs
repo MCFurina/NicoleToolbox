@@ -1,4 +1,5 @@
 using Microsoft.UI;
+using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -8,8 +9,8 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
@@ -37,6 +38,22 @@ namespace NicoleToolbox.Pages.WebsiteFrames
             {
                 root.ActualThemeChanged += Root_ActualThemeChanged;
                 UpdateTitleBar(root.ActualTheme);
+            }
+        }
+
+        private void PinToTop(object sender, RoutedEventArgs e)
+        {
+            if (pinToTopToggle.IsOn)
+            {
+                OverlappedPresenter presenter = OverlappedPresenter.Create();
+                presenter.IsAlwaysOnTop = true;
+                AppWindow.SetPresenter(presenter);
+            }
+            else
+            {
+                OverlappedPresenter presenter = OverlappedPresenter.Create();
+                presenter.IsAlwaysOnTop = false;
+                AppWindow.SetPresenter(presenter);
             }
         }
 

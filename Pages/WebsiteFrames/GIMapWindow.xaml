@@ -20,6 +20,7 @@
             </TitleBar.IconSource>
             <TitleBar.RightHeader>
                 <StackPanel Orientation="Horizontal" Spacing="10">
+                    <ToggleSwitch x:Name="pinToTopToggle" OffContent="置顶" OnContent="置顶中" Toggled="PinToTop" IsOn="False"/>
                     <Button Click="Reload">
                         <StackPanel Orientation="Horizontal" Spacing="10">
                             <FontIcon Glyph="&#xE72C;" HorizontalAlignment="Left" VerticalAlignment="Center"/>
