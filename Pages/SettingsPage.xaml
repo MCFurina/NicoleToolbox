@@ -10,5 +10,43 @@
 
     <Grid>
         <TextBlock Text="设置" FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0"/>
+        <Grid x:Name="grid0" Margin="0,160,0,0">
+            <ScrollViewer>
+                <Grid VerticalAlignment="Top">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" MinWidth="400" MaxWidth="1000" Padding="0,10,0,10">
+                        <SystemBackdropElement CornerRadius="8">
+                            <SystemBackdropElement.SystemBackdrop>
+                                <MicaBackdrop/>
+                            </SystemBackdropElement.SystemBackdrop>
+                        </SystemBackdropElement>
+                        <Grid Padding="25,10,25,10" BorderThickness="1" CornerRadius="8">
+                            <StackPanel Orientation="Horizontal" Spacing="10" VerticalAlignment="Center" HorizontalAlignment="Left">
+                                <FontIcon Glyph="&#xE767;"/>
+                                <TextBlock Text="启用交互声音"/>
+                            </StackPanel>
+                            <ToggleSwitch x:Name="SoundToggle" OffContent="关闭" OnContent="开启" Toggled="SoundToggle_Toggled" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="1" MinWidth="400" MaxWidth="1000" Padding="0,10,0,10">
+                        <SystemBackdropElement CornerRadius="8">
+                            <SystemBackdropElement.SystemBackdrop>
+                                <MicaBackdrop/>
+                            </SystemBackdropElement.SystemBackdrop>
+                        </SystemBackdropElement>
+                        <Grid Padding="25,10,25,10" BorderThickness="1" CornerRadius="8">
+                            <StackPanel Orientation="Horizontal" Spacing="10" VerticalAlignment="Center" HorizontalAlignment="Left">
+                                <FontIcon Glyph="&#xF196;"/>
+                                <TextBlock Text="测试"/>
+                            </StackPanel>
+                            <ToggleSwitch x:Name="TestToggle" OffContent="关闭" OnContent="开启" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
     </Grid>
 </Page>
