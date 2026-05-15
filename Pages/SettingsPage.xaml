@@ -20,7 +20,6 @@
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                         <RowDefinition/>
-                        <RowDefinition/>
                     </Grid.RowDefinitions>
                     <Grid MaxWidth="1024" Grid.Row="0" Padding="25,5,25,5">
                         <Grid Height="80" Padding="25,10,25,10" CornerRadius="4" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1">
@@ -48,21 +47,6 @@
                                 </StackPanel>
                             </StackPanel>
                             <ToggleSwitch x:Name="SoundToggle" OnContent="开启" OffContent="关闭" Toggled="SoundToggle_Toggled" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                        </Grid>
-                    </Grid>
-                    <Grid MaxWidth="1024" Grid.Row="2" Padding="25,5,25,5">
-                        <Grid Height="80" Padding="25,10,25,10" CornerRadius="4" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1">
-                            <StackPanel Orientation="Horizontal" Spacing="20" VerticalAlignment="Center" HorizontalAlignment="Left">
-                                <FontIcon Glyph="&#xE90C;"/>
-                                <StackPanel Orientation="Vertical">
-                                    <TextBlock Text="导航栏位置"/>
-                                    <TextBlock Text="选择你喜欢的导航栏位置" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
-                                </StackPanel>
-                            </StackPanel>
-                            <ComboBox x:Name="NavComboBox" SelectionChanged="NavComboBox_SelectionChanged" PlaceholderText="选择导航栏位置" HorizontalAlignment="Right" VerticalAlignment="Center">
-                                <ComboBoxItem Content="左侧"/>
-                                <ComboBoxItem Content="顶部"/>
-                            </ComboBox>
                         </Grid>
                     </Grid>
                 </Grid>

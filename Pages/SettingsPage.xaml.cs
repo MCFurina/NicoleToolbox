@@ -1,4 +1,5 @@
 using Microsoft.UI;
+using Microsoft.UI.Composition.SystemBackdrops;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media;
@@ -41,20 +42,6 @@ namespace NicoleToolbox
             else
             {
                 SoundToggle.IsOn = false;
-            }
-
-            // 同步当前导航栏位置设置到ComboBox
-            if (App.MainWindow != null)
-            {
-                switch (App.MainWindow.Nav.PaneDisplayMode)
-                {
-                    case NavigationViewPaneDisplayMode.Left:
-                        NavComboBox.SelectedItem = NavComboBox.Items[0];
-                        break;
-                    case NavigationViewPaneDisplayMode.Top:
-                        NavComboBox.SelectedItem = NavComboBox.Items[1];
-                        break;
-                }
             }
         }
 
@@ -108,22 +95,6 @@ namespace NicoleToolbox
             else
             {
                 ElementSoundPlayer.State = ElementSoundPlayerState.Off;
-            }
-        }
-
-        private void NavComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (NavComboBox.SelectedItem is ComboBoxItem selectedItem)
-            {
-                switch (selectedItem.Content.ToString())
-                {
-                    case "左侧":
-                        App.MainWindow?.Nav.PaneDisplayMode = NavigationViewPaneDisplayMode.Left;
-                        break;
-                    case "顶部":
-                        App.MainWindow?.Nav.PaneDisplayMode = NavigationViewPaneDisplayMode.Top;
-                        break;
-                }
             }
         }
 
