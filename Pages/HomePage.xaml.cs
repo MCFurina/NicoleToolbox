@@ -31,11 +31,6 @@ namespace NicoleToolbox
             InitializeComponent();
         }
 
-        private void About(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(AboutPage));
-        }
-
         private void WebTools(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(WebToolsPage));

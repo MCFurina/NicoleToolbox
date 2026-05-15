@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <Grid>
-        <TextBlock Text="百宝箱" FontSize="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0"/>
+        <TextBlock Text="百宝箱" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0"/>
         <SelectorBar SelectionChanged="selectorbar_SelectionChanged" Margin="0,100,0,0">
             <SelectorBarItem Text="原神" IsSelected="True"/>
             <SelectorBarItem Text="Windows"/>

@@ -31,7 +31,7 @@ namespace NicoleToolbox
 
         private void Back(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(AboutPage));
+            Frame.Navigate(typeof(SettingsPage));
         }
 
         private void MCFurina(object sender, RoutedEventArgs e)

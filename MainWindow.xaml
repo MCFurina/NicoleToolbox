@@ -13,12 +13,12 @@
         <MicaBackdrop/>
     </Window.SystemBackdrop>
     <Grid>
-        <TitleBar x:Name="titleBar" Title="尼可工具箱" Subtitle="Dev" IsBackButtonVisible="False" IsPaneToggleButtonVisible="False" VerticalAlignment="Top" Height="32">
+        <TitleBar x:Name="titleBar" Title="尼可工具箱" IsBackButtonVisible="False" IsPaneToggleButtonVisible="False" VerticalAlignment="Top" Height="32">
             <TitleBar.IconSource>
                 <ImageIconSource ImageSource="/Assets/Logo.ico"/>
             </TitleBar.IconSource>
         </TitleBar>
-        <NavigationView x:Name="Nav" PaneDisplayMode="Auto" IsSettingsVisible="True" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="True" Margin="0,32,0,0">
+        <NavigationView x:Name="Nav" x:FieldModifier="public" PaneDisplayMode="Left" IsSettingsVisible="True" IsBackButtonVisible="Collapsed" IsPaneToggleButtonVisible="True" Margin="0,32,0,0">
             <NavigationView.MenuItems>
                 <NavigationViewItem Content="主页" Tag="Home">
                     <NavigationViewItem.Icon>
@@ -29,12 +29,6 @@
                 <NavigationViewItem Content="百宝箱" Tag="WebTools">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xECAA;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-
-                <NavigationViewItem Content="关于" Tag="About">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE946;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
             </NavigationView.MenuItems>
