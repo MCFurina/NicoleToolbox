@@ -33,6 +33,7 @@ namespace NicoleToolbox.Pages.WebsiteFrames
             Title = "原神地图工具";
             ExtendsContentIntoTitleBar = true;
             SetTitleBar(titleBar);
+            AppWindow.TitleBar.PreferredHeightOption = TitleBarHeightOption.Tall; 
             var root = Content as FrameworkElement;
             if (root != null)
             {
