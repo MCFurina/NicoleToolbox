@@ -1,5 +1,5 @@
 # NicoleToolbox
-一个原神工具箱  
+一个工具箱应用  
 使用 .NET 10.0 和 WinUI3 制作  
 
 [应用网站](https://MCFurina.github.io/NicoleToolbox/)  
