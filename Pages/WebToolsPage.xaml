@@ -65,6 +65,27 @@
                             <TextBlock Text="点击跳转到设置应用查看系统信息" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
                         </Grid>
                     </Button>
+                    <Button Width="400" Height="100" Click="dxdiag">
+                        <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <FontIcon Glyph="&#xEC77;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                            <TextBlock Text="DirectX诊断工具" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
+                            <TextBlock Text="可以查看DirectX相关信息，以及显卡和声卡信息" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
+                        </Grid>
+                    </Button>
+                    <Button Width="400" Height="100" Click="msinfo32">
+                        <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <FontIcon Glyph="&#xE8A1;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                            <TextBlock Text="系统详细信息" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
+                            <TextBlock Text="最详细的系统自带系统详情工具" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
+                        </Grid>
+                    </Button>
+                    <Button Width="400" Height="100" Click="taskmgr">
+                        <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <FontIcon Glyph="&#xF120;" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                            <TextBlock Text="任务管理器" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
+                            <TextBlock Text="可以查看和管理正在运行的程序和进程" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
+                        </Grid>
+                    </Button>
                 </GridView>
             </ScrollViewer>
         </Grid>

@@ -50,6 +50,7 @@ namespace NicoleToolbox.Pages
             }
         }
 
+        // 原神工具
         private void Map(object sender, RoutedEventArgs e)
         {
             GIMapWindow mapWindow = new GIMapWindow();
@@ -71,14 +72,30 @@ namespace NicoleToolbox.Pages
             Process.Start("explorer.exe","https://baike.mihoyo.com/ys/obc");
         }
 
+        // Windows工具
         private void winver(object sender, RoutedEventArgs e)
         {
-            Process.Start("winver.exe");
+            Process.Start("explorer.exe", "C:\\Windows\\System32\\winver.exe");
         }
 
         private void systeminfo(object sender, RoutedEventArgs e)
         {
             Process.Start("explorer.exe", "ms-settings:about");
+        }
+
+        private void dxdiag(object sender, RoutedEventArgs e)
+        {
+            Process.Start("explorer.exe", "C:\\Windows\\System32\\dxdiag.exe");
+        }
+
+        private void msinfo32(object sender, RoutedEventArgs e)
+        {
+            Process.Start("explorer.exe", "C:\\Windows\\System32\\msinfo32.exe");
+        }
+
+        private void taskmgr(object sender, RoutedEventArgs e)
+        {
+            Process.Start("explorer.exe", "C:\\Windows\\System32\\Taskmgr.exe");
         }
     }
 }
