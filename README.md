@@ -2,9 +2,9 @@
 一个原神工具箱  
 使用 .NET 10.0 和 WinUI3 制作  
 以下是应用截图：  
-![HomePage](./images/HomePage.png){:height="30%" width="30%"}  
-![YuanshenTools](./images/ToolPage1.png){:height="30%" width="30%"}  
-![WindowsTools](./images/ToolPage2.png){:height="30%" width="30%"}  
+![HomePage](./images/HomePage.png)
+![YuanshenTools](./images/ToolPage1.png)
+![WindowsTools](./images/ToolPage2.png)
 
 # 如何使用？
 支持 Windows 10 和 Windows 11，推荐使用 Windows 11 以获得更好的体验。  
