@@ -6,7 +6,7 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Media.Animation;
 using Microsoft.UI.Xaml.Navigation;
-using NicoleToolbox.Pages.WebsiteFrames;
+using NicoleToolbox.Pages.Windows;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -19,7 +19,7 @@ using Windows.Foundation.Collections;
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
-namespace NicoleToolbox
+namespace NicoleToolbox.Pages
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.

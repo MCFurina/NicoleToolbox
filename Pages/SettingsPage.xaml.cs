@@ -9,7 +9,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using Windows.Storage;
 
-namespace NicoleToolbox
+namespace NicoleToolbox.Pages
 {
     public sealed partial class SettingsPage : Page
     {
