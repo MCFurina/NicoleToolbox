@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <Grid>
-        <TextBlock Text="百宝箱" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0"/>
+        <TextBlock Text="工具箱" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0"/>
         <SelectorBar SelectionChanged="selectorbar_SelectionChanged" Margin="0,100,0,0">
             <SelectorBarItem Text="原神" IsSelected="True"/>
             <SelectorBarItem Text="Windows"/>
@@ -30,6 +30,9 @@
                             <TextBlock Text="养成计算器" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
                             <TextBlock Text="原神官方养成计算器" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
                         </Grid>
+                        <ToolTipService.ToolTip>
+                            <ToolTip Content="点击用浏览器打开"/>
+                        </ToolTipService.ToolTip>
                     </Button>
                     <Button Width="400" Height="100" Click="Lineup">
                         <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -37,6 +40,9 @@
                             <TextBlock Text="配队分享" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
                             <TextBlock Text="原神官方配队分享社区" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
                         </Grid>
+                        <ToolTipService.ToolTip>
+                            <ToolTip Content="点击用浏览器打开"/>
+                        </ToolTipService.ToolTip>
                     </Button>
                     <Button Width="400" Height="100" Click="Wiki">
                         <Grid Width="360" Height="60" VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -44,6 +50,9 @@
                             <TextBlock Text="观测枢" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-20,0,0"/>
                             <TextBlock Text="原神官方Wiki，内容由玩家编写" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
                         </Grid>
+                        <ToolTipService.ToolTip>
+                            <ToolTip Content="点击用浏览器打开"/>
+                        </ToolTipService.ToolTip>
                     </Button>
                 </GridView>
             </ScrollViewer>

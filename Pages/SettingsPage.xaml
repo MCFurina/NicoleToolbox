@@ -20,8 +20,19 @@
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                         <RowDefinition/>
+                        <RowDefinition/>
                     </Grid.RowDefinitions>
                     <Grid MaxWidth="1024" Grid.Row="0" Padding="25,5,25,5">
+                        <InfoBar
+                        IsOpen="True"
+                        IsClosable="False"
+                        MaxWidth="1024"
+                        Title="提示"
+                        Message="目前设置项无法保存，仅在本次运行生效" >
+
+                        </InfoBar>
+                    </Grid>
+                    <Grid MaxWidth="1024" Grid.Row="1" Padding="25,5,25,5">
                         <Grid Height="80" Padding="25,10,25,10" CornerRadius="4" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1">
                             <StackPanel Orientation="Horizontal" Spacing="20" VerticalAlignment="Center" HorizontalAlignment="Left">
                                 <FontIcon Glyph="&#xE790;"/>
@@ -37,7 +48,7 @@
                             </ComboBox>
                         </Grid>
                     </Grid>
-                    <Grid MaxWidth="1024" Grid.Row="1" Padding="25,5,25,5">
+                    <Grid MaxWidth="1024" Grid.Row="2" Padding="25,5,25,5">
                         <Grid Height="80" Padding="25,10,25,10" CornerRadius="4" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1">
                             <StackPanel Orientation="Horizontal" Spacing="20" VerticalAlignment="Center" HorizontalAlignment="Left">
                                 <FontIcon Glyph="&#xE767;"/>

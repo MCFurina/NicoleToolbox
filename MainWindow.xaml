@@ -26,9 +26,9 @@
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Content="百宝箱" Tag="WebTools">
+                <NavigationViewItem Content="工具箱" Tag="WebTools">
                     <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xECAA;"/>
+                        <FontIcon Glyph="&#xE80A;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
             </NavigationView.MenuItems>

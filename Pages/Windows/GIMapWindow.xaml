@@ -15,9 +15,6 @@
 
     <Grid>
         <TitleBar x:Name="titleBar" Title="原神地图工具" IsBackButtonVisible="False" IsPaneToggleButtonVisible="False" VerticalAlignment="Top" Height="50">
-            <TitleBar.IconSource>
-                <ImageIconSource ImageSource="/Assets/Logo.ico"/>
-            </TitleBar.IconSource>
             <TitleBar.RightHeader>
                 <StackPanel Orientation="Horizontal" Spacing="10">
                     <ToggleSwitch x:Name="pinToTopToggle" OffContent="置顶" OnContent="置顶中" Toggled="PinToTop" IsOn="False"/>
