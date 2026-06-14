@@ -16,7 +16,11 @@ SDK 和 .NET 桌面运行时均可运行本应用！请自行选择！
 
 # 应用画廊
 主页  
-![HomePage](./images/HomePage.png)  
+![HomePage](./images/APPimages/HomePage.png)  
 工具页  
-![YuanshenTools](./images/ToolPage1.png)  
-![WindowsTools](./images/ToolPage2.png)  
+![YuanshenTools](./images/APPimages/ToolPage1.png)  
+![WindowsTools](./images/APPimages/ToolPage2.png)  
+设置  
+![Settings](./images/APPimages/Settings.png)  
+关于  
+![About](./images/APPimages/About.png)  
