@@ -40,21 +40,3 @@ jobs:
           files: NicoleToolbox-${{ github.run_number }}-x64.zip
           prerelease: false
           token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Publish-x64-SelfContained
-        run: |
-          dotnet publish NicoleToolbox.csproj -c Release -o publish-x64-selfcontained -a x64 --self-contained true /m
-
-      - name: Zip-x64-SelfContained
-        run: |
-          $zipName = "NicoleToolbox-${{ github.run_number }}-x64-selfcontained.zip"
-          Compress-Archive -Path publish-x64-selfcontained/* -DestinationPath $zipName
-
-      - name: Release-x64-SelfContained
-        uses: softprops/action-gh-release@v2
-        with:
-          name: "Dev Release #${{ github.run_number }}"
-          tag_name: dev-${{ github.run_number }}
-          files: NicoleToolbox-${{ github.run_number }}-x64-selfcontained.zip
-          prerelease: false
-          token: ${{ secrets.GITHUB_TOKEN }}

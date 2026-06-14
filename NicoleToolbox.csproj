@@ -15,7 +15,7 @@
 	<!-- 不打包 -->
 	<WindowsPackageType>None</WindowsPackageType>
 	<!-- 自包含 Windows App SDK Runtime -->
-	<WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+	<WindowsAppSDKSelfContained>false</WindowsAppSDKSelfContained>
 	<!-- 设置图标 -->
 	<ApplicationIcon>Assets\Logo.ico</ApplicationIcon>
   </PropertyGroup>

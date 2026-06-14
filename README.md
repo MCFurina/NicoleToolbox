@@ -7,12 +7,15 @@
 [获取最新版本](https://github.com/MCFurina/NicoleToolbox/releases)  
 
 # 如何使用？
-支持 Windows 10 和 Windows 11，推荐使用 Windows 11 以获得更好的体验。  
-Windows APP SDK Runtime 已包含在发布版本中！  
+支持 Windows 10 和 Windows 11，推荐使用 Windows 11 以获得更好的体验。   
 
 使用前请先下载并安装 .NET 10.0！  
 [下载 .NET 10.0](https://dotnet.microsoft.com/zh-cn/download/dotnet/10.0)  
-SDK 和 .NET 桌面运行时均可运行本应用！请自行选择！   
+SDK 和 .NET 桌面运行时均可运行本应用！请自行选择！  
+
+然后下载并安装 Windows APP SDK 2.2.0！  
+[下载 Windows APP SDK](https://learn.microsoft.com/zh-cn/windows/apps/windows-app-sdk/downloads)  
+选择稳定版中的 Windows APP SDK 2.2.0，下载并安装即可！  
 
 # 应用画廊
 主页  
