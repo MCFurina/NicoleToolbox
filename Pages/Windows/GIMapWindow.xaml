@@ -34,5 +34,8 @@
             </TitleBar.RightHeader>
         </TitleBar>
         <WebView2 x:Name="webview" Source="https://act.mihoyo.com/ys/app/interactive-map/index.html" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,50,0,0"/>
+        <ProgressBar x:Name="loadingbar" VerticalAlignment="Top" HorizontalAlignment="Stretch" IsIndeterminate="True" ShowPaused="False" ShowError="False" Margin="0,50,0,0"/>
+        <TextBlock x:Name="loadingtext" VerticalAlignment="Center" HorizontalAlignment="Center" Text="正在加载地图" FontSize="20"/>
+        <TextBlock x:Name="errortext" VerticalAlignment="Center" HorizontalAlignment="Center" Text="加载失败，请检查网络！" Visibility="Collapsed" FontSize="20"/>
     </Grid>
 </Window>

@@ -7,6 +7,7 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using Microsoft.Web.WebView2.Core;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -39,6 +40,25 @@ namespace NicoleToolbox.Pages.Windows
             {
                 root.ActualThemeChanged += Root_ActualThemeChanged;
                 UpdateTitleBar(root.ActualTheme);
+            }
+            webview.CoreWebView2Initialized += (s, e) => {
+                webview.NavigationCompleted += OnNavigationCompleted;
+            };
+        }
+
+        private void OnNavigationCompleted(WebView2 sender, CoreWebView2NavigationCompletedEventArgs args)
+        {
+            if (args.IsSuccess)
+            {
+                loadingbar.Visibility = Visibility.Collapsed;
+                loadingtext.Visibility = Visibility.Collapsed;
+                errortext.Visibility = Visibility.Collapsed;
+            }
+            else if (!args.IsSuccess)
+            {
+                loadingbar.ShowError = true;
+                loadingtext.Visibility = Visibility.Collapsed;
+                errortext.Visibility = Visibility.Visible;
             }
         }
 
