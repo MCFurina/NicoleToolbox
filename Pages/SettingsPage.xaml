@@ -9,12 +9,11 @@
     mc:Ignorable="d">
 
     <Grid>
-        <TextBlock Text="设置" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0"/>
-        <SelectorBar x:Name="selectorBar" SelectionChanged="SelectorBar_SelectionChanged" Margin="0,100,0,0">
+        <SelectorBar x:Name="selectorBar" SelectionChanged="SelectorBar_SelectionChanged" Margin="0,0,0,0">
             <SelectorBarItem Text="基础设置" IsSelected="True"/>
             <SelectorBarItem Text="关于"/>
         </SelectorBar>
-        <Grid x:Name="grid0" Margin="0,160,0,0">
+        <Grid x:Name="grid0" Margin="0,60,0,0">
             <ScrollViewer>
                 <Grid VerticalAlignment="Top">
                     <Grid.RowDefinitions>
@@ -63,7 +62,7 @@
                 </Grid>
             </ScrollViewer>
         </Grid>
-        <Grid x:Name="grid1" Margin="0,160,0,0">
+        <Grid x:Name="grid1" Margin="0,60,0,0">
             <ScrollViewer>
                 <Grid>
                     <Border VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,10,0,0" Padding="8" CornerRadius="8">

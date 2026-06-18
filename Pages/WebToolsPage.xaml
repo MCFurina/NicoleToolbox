@@ -9,12 +9,11 @@
     mc:Ignorable="d">
 
     <Grid>
-        <TextBlock Text="工具箱" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0"/>
-        <SelectorBar SelectionChanged="selectorbar_SelectionChanged" Margin="0,100,0,0">
+        <SelectorBar SelectionChanged="selectorbar_SelectionChanged" Margin="0,0,0,0">
             <SelectorBarItem Text="原神" IsSelected="True"/>
             <SelectorBarItem Text="Windows"/>
         </SelectorBar>
-        <Grid x:Name="grid0" Margin="0,160,0,0">
+        <Grid x:Name="grid0" Margin="0,60,0,0">
             <ScrollViewer>
                 <GridView HorizontalAlignment="Center" VerticalAlignment="Top" SelectionMode="None">
                     <Button Width="400" Height="100" Click="Map">
@@ -57,7 +56,7 @@
                 </GridView>
             </ScrollViewer>
         </Grid>
-        <Grid x:Name="grid1" Margin="0,160,0,0">
+        <Grid x:Name="grid1" Margin="0,60,0,0">
             <ScrollViewer>
                 <GridView HorizontalAlignment="Center" VerticalAlignment="Top" SelectionMode="None">
                     <Button Width="400" Height="100" Click="winver">
