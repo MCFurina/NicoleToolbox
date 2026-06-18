@@ -17,26 +17,30 @@ using Windows.Foundation.Collections;
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
-namespace NicoleToolbox.Pages
+namespace NicoleToolbox.Pages.Windows
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// An empty window that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class ContributorsPage : Page
+    public sealed partial class ContributorsWindow : Window
     {
-        public ContributorsPage()
+        public ContributorsWindow()
         {
             InitializeComponent();
-        }
-
-        private void Back(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(SettingsPage));
+            window.Title = "贡献者";
+            window.ExtendsContentIntoTitleBar = true;
+            window.SetTitleBar(titlebar);
+            this.AppWindow.Resize(new global::Windows.Graphics.SizeInt32(1200, 800));
         }
 
         private void MCFurina(object sender, RoutedEventArgs e)
         {
             Process.Start("explorer.exe", "https://github.com/MCFurina");
+        }
+
+        private void Website(object sender, RoutedEventArgs e)
+        {
+            Process.Start("explorer.exe", "https://mcfurina.github.io");
         }
     }
 }

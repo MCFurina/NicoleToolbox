@@ -4,6 +4,7 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using NicoleToolbox.Pages.Windows;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -111,7 +112,8 @@ namespace NicoleToolbox.Pages
 
         private void Contributors(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ContributorsPage));
+            ContributorsWindow contributorsWindow = new ContributorsWindow();
+            contributorsWindow.Activate();
         }
 
         private void Website(object sender, RoutedEventArgs e)
