@@ -32,6 +32,9 @@ namespace NicoleToolbox
             AppWindow.SetIcon(Path.Combine(AppContext.BaseDirectory, "Assets/Logo.ico"));
             Title = "尼可工具箱";
 
+            this.AppWindow.Resize(new global::Windows.Graphics.SizeInt32(1400, 800));
+            CenterWindow();
+
             // 给导航栏自带的设置按钮设置Tag
             if (Nav.SettingsItem is NavigationViewItem settingsItem)
             {
@@ -146,6 +149,27 @@ namespace NicoleToolbox
                 tb.ButtonHoverBackgroundColor = ColorHelper.FromArgb(255, 232, 232, 232);
                 tb.ButtonPressedBackgroundColor = ColorHelper.FromArgb(255, 210, 210, 210);
             }
+        }
+
+        private void CenterWindow()
+        {
+            IntPtr hwnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
+            var windowId = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hwnd);
+            var appWindow = Microsoft.UI.Windowing.AppWindow.GetFromWindowId(windowId);
+
+            // 获取屏幕工作区大小（排除任务栏）
+            var displayArea = Microsoft.UI.Windowing.DisplayArea.GetFromWindowId(windowId, Microsoft.UI.Windowing.DisplayAreaFallback.Nearest);
+            var workArea = displayArea.WorkArea;
+
+            // 获取当前窗口大小
+            var currentSize = appWindow.Size;
+
+            // 计算居中位置
+            int x = (workArea.Width - currentSize.Width) / 2;
+            int y = (workArea.Height - currentSize.Height) / 2;
+
+            // 移动窗口到居中位置
+            appWindow.Move(new Windows.Graphics.PointInt32(x, y));
         }
     }
 }
