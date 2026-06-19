@@ -17,6 +17,9 @@ namespace NicoleToolbox.Pages
         public SettingsPage()
         {
             InitializeComponent();
+            // 获取版本号，更改关于页文本
+            var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+            VersionTextBlock.Text = $"{version}";
 
             // 同步当前主题设置到ComboBox
             if (App.MainWindow?.Content is FrameworkElement rootElement)

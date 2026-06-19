@@ -68,7 +68,10 @@
                     <Border VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,250" Padding="8" CornerRadius="8">
                         <StackPanel Orientation="Vertical" Spacing="8">
                             <TextBlock Text="尼可工具箱" FontSize="30" HorizontalAlignment="Center" TextWrapping="Wrap"/>
-                            <TextBlock Text="一个原神工具箱，集成了一些在线工具，基于 WinUI 3 制作" FontSize="20" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="0">
+                                <TextBlock Text="版本：" FontSize="20" TextWrapping="Wrap"/>
+                                <TextBlock Text="正在获取" FontSize="20" TextWrapping="Wrap" x:Name="VersionTextBlock"/>
+                            </StackPanel>
                         </StackPanel>
                     </Border>
                     <StackPanel Orientation="Vertical" Spacing="8" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,50,0,0">
