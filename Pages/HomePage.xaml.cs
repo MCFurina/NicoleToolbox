@@ -10,7 +10,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
@@ -24,6 +28,7 @@ namespace NicoleToolbox.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
+
     public sealed partial class HomePage : Page
     {
         public HomePage()
@@ -34,6 +39,11 @@ namespace NicoleToolbox.Pages
         private void WebTools(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(WebToolsPage));
+        }
+
+        private void Settings(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(SettingsPage));
         }
     }
 }

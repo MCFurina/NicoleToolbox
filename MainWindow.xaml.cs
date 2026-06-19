@@ -70,9 +70,7 @@ namespace NicoleToolbox
             }
         }
 
-        /// <summary>
-        /// 菜单点击导航
-        /// </summary>
+        // 菜单点击导航
         private void Nav_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
         {
             if (args?.InvokedItemContainer is NavigationViewItem item && item.Tag is string tag)
@@ -93,35 +91,50 @@ namespace NicoleToolbox
             }
         }
 
-        /// <summary>
-        /// 页面导航完成后 → 自动选中对应菜单
-        /// </summary>
+        // 页面导航完成后 → 自动选中对应菜单
         private void ContentFrame_Navigated(object sender, NavigationEventArgs e)
         {
             if (Nav == null || ContentFrame == null) return;
 
-            // 获取当前显示的页面类型
-            System.Type currentPageType = e.SourcePageType;
+            // 1. 获取当前页面的 Type
+            var currentPageType = e.SourcePageType;
+            string? targetTag = null;
 
-            // 根据页面类型匹配菜单项
-            foreach (var menuItem in Nav.MenuItems)
+            // 2. 根据 Type 获取对应的 Tag 字符串
+            if (currentPageType == typeof(HomePage))
             {
-                if (menuItem is NavigationViewItem item && item.Tag is string tag)
-                {
-                    // 页面类型与 Tag 匹配 → 选中该项
-                    bool isMatch = currentPageType switch
-                    {
-                        System.Type t when t == typeof(HomePage) => tag == "Home",
-                        System.Type t when t == typeof(WebToolsPage) => tag == "WebTools",
-                        System.Type t when t == typeof(SettingsPage) => tag == "Settings",
-                        _ => false
-                    };
+                targetTag = "Home";
+            }
+            else if (currentPageType == typeof(WebToolsPage))
+            {
+                targetTag = "WebTools";
+            }
+            else if (currentPageType == typeof(SettingsPage))
+            {
+                targetTag = "Settings";
+            }
 
-                    if (isMatch)
+            // 3. 如果找到了 Tag，尝试高亮菜单
+            if (targetTag != null)
+            {
+                bool found = false;
+
+                // [步骤 A] 先在普通的 MenuItems 里找
+                foreach (var menuItem in Nav.MenuItems)
+                {
+                    if (menuItem is NavigationViewItem item && item.Tag is string tag && tag == targetTag)
                     {
                         Nav.SelectedItem = item;
+                        found = true;
                         break;
                     }
+                }
+
+                // [步骤 B] 如果在普通菜单没找到，并且目标就是 Settings，则选中自带的 SettingsItem
+                if (!found && targetTag == "Settings")
+                {
+                    // 直接选中系统自带的设置项
+                    Nav.SelectedItem = Nav.SettingsItem;
                 }
             }
         }
