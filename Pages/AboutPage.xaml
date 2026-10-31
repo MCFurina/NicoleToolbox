@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="NicoleToolbox.Pages.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NicoleToolbox.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" NavigationCacheMode="Required">
+
+    <Grid>
+        <ScrollView ContentOrientation="Both" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" MaxWidth="1024">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="36,40,0,0">
+                <TextBlock Text="关于" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,36"/>
+                <Image Source="/Assets/NicoleToolbox.ico" Width="80" Height="80" HorizontalAlignment="Left" Margin="0,0,0,10"/>
+                <TextBlock Text="NicoleToolbox" HorizontalAlignment="Left" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,20"/>
+                <TextBlock Text="基于 WinUI3 制作的简单工具箱" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,20"/>
+                <Border Style="{StaticResource CardBorderStyle}">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="版本信息" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,20"/>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="版本 " Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
+                            <TextBlock Grid.Row="0" Grid.Column="1" x:Name="AppVersion" Margin="10,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Text=".NET 环境版本 " Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
+                            <TextBlock Grid.Row="1" Grid.Column="1" x:Name="DotnetVersion" Margin="10,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
+                            <TextBlock Grid.Row="2" Grid.Column="0" Text="Windows APP SDK 版本 " Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
+                            <TextBlock Grid.Row="2" Grid.Column="1" x:Name="WinAppSdkVersion" Margin="10,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </ScrollView>
+    </Grid>
+</Page>

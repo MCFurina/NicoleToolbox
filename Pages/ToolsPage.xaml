@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="NicoleToolbox.Pages.ToolsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NicoleToolbox.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" NavigationCacheMode="Required">
+
+    <Grid>
+        <ScrollView ContentOrientation="Both" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" MaxWidth="1024">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="36,40,0,0">
+                <TextBlock Text="系统工具" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,36"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Column="0" Grid.Row="0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Text="终端" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
+                            <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Spacing="10">
+                                <Button Content="以管理员身份打开" x:Name="shelladmin" Click="shelladmin_Click"/>
+                                <Button Content="打开" x:Name="shell" Click="shell_Click"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                    <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Column="1" Grid.Row="0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Text="任务管理器" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
+                            <Button Grid.Row="1" Content="打开" x:Name="taskmgr" Click="taskmgr_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                        </Grid>
+                    </Border>
+                    <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Column="0" Grid.Row="1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Text="设备管理器" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
+                            <Button Grid.Row="1" Content="打开" x:Name="devmgmt" Click="devmgmt_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                        </Grid>
+                    </Border>
+                    <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Column="1" Grid.Row="1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Text="高级系统设置" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
+                            <Button Grid.Row="1" Content="打开" x:Name="advanced_system_settings" Click="advanced_system_settings_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                        </Grid>
+                    </Border>
+                    <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Column="0" Grid.Row="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Text="计算机管理" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
+                            <Button Grid.Row="1" Content="打开" x:Name="compmgmt" Click="compmgmt_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </StackPanel>
+        </ScrollView>
+    </Grid>
+</Page>
