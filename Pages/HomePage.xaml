@@ -28,11 +28,14 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Row="0" Grid.Column="0">
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock Text="实时时间" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,20"/>
-                            <TextBlock Text="Time" x:Name="TimeText" HorizontalAlignment="Center" Margin="0,0,0,10" Style="{StaticResource TitleLargeTextBlockStyle}"/>
-                            <TextBlock Text="Date And Week" x:Name="DateText" HorizontalAlignment="Center" Margin="0,0,0,10" Style="{StaticResource SubtitleTextBlockStyle}"/>
-                        </StackPanel>
+                        <Grid>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="实时时间" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,20"/>
+                                <TextBlock Text="Time" x:Name="TimeText" HorizontalAlignment="Center" Margin="0,0,0,10" Style="{StaticResource TitleLargeTextBlockStyle}"/>
+                                <TextBlock Text="Date And Week" x:Name="DateText" HorizontalAlignment="Center" Margin="0,0,0,10" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                            </StackPanel>
+                            <HyperlinkButton HorizontalAlignment="Right" Content="窗口化时钟" x:Name="OpenClockWindow" Click="OpenClockWindow_Click" VerticalAlignment="Bottom"/>
+                        </Grid>
                     </Border>
                     <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Row="0" Grid.Column="1">
                         <StackPanel Orientation="Vertical">

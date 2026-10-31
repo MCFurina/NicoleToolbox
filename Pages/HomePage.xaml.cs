@@ -457,5 +457,10 @@ namespace NicoleToolbox.Pages
 
             await dialog.ShowAsync();
         }
+
+        private void OpenClockWindow_Click(object sender, RoutedEventArgs e)
+        {
+            new WidgetWindow.ClockWindow().Activate();
+        }
     }
 }
