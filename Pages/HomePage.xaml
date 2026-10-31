@@ -29,83 +29,106 @@
                     </Grid.RowDefinitions>
                     <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Row="0" Grid.Column="0">
                         <Grid>
-                            <StackPanel Orientation="Vertical">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Orientation="Vertical" Grid.Row="0">
                                 <TextBlock Text="实时时间" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,20"/>
                                 <TextBlock Text="Time" x:Name="TimeText" HorizontalAlignment="Center" Margin="0,0,0,10" Style="{StaticResource TitleLargeTextBlockStyle}"/>
                                 <TextBlock Text="Date And Week" x:Name="DateText" HorizontalAlignment="Center" Margin="0,0,0,10" Style="{StaticResource SubtitleTextBlockStyle}"/>
                             </StackPanel>
-                            <HyperlinkButton HorizontalAlignment="Right" Content="窗口化时钟" x:Name="OpenClockWindow" Click="OpenClockWindow_Click" VerticalAlignment="Bottom"/>
+                            <Button HorizontalAlignment="Right" Content="窗口化时钟" x:Name="OpenClockWindow" Click="OpenClockWindow_Click" VerticalAlignment="Bottom" Grid.Row="1"/>
                         </Grid>
                     </Border>
                     <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Row="0" Grid.Column="1">
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock Text="C盘使用情况" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,20"/>
-                            <Grid Margin="0,0,0,20">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
-                                <TextBlock Grid.Row="0" Grid.Column="0" Text="容量：" Margin="0,0,0,10"/>
-                                <TextBlock Grid.Row="0" Grid.Column="1" x:Name="CTotal" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
-                                <TextBlock Grid.Row="1" Grid.Column="0" Text="已用空间：" Margin="0,0,0,10"/>
-                                <TextBlock Grid.Row="1" Grid.Column="1" x:Name="CUsed" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
-                                <TextBlock Grid.Row="2" Grid.Column="0" Text="剩余空间：" Margin="0,0,0,10"/>
-                                <TextBlock Grid.Row="2" Grid.Column="1" x:Name="CFree" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
-                            </Grid>
-                            <ProgressBar x:Name="CDiskProgress" Value="0" Width="200"/>
-                            <Grid Margin="0,8,0,0">
-                                <TextBlock Text="0%" x:Name="CDiskPercentage" VerticalAlignment="Center" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
-                                <HyperlinkButton x:Name="OpenStorageSettingButton" Click="OpenStorageSettingButton_Click" Content="存储设置" HorizontalAlignment="Right"/>
-                            </Grid>
-                        </StackPanel>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Orientation="Vertical" Grid.Row="0">
+                                <TextBlock Text="C盘使用情况" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,20"/>
+                                <Grid Margin="0,0,0,20">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0" Grid.Column="0" Text="容量：" Margin="0,0,0,10"/>
+                                    <TextBlock Grid.Row="0" Grid.Column="1" x:Name="CTotal" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
+                                    <TextBlock Grid.Row="1" Grid.Column="0" Text="已用空间：" Margin="0,0,0,10"/>
+                                    <TextBlock Grid.Row="1" Grid.Column="1" x:Name="CUsed" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
+                                    <TextBlock Grid.Row="2" Grid.Column="0" Text="剩余空间：" Margin="0,0,0,10"/>
+                                    <TextBlock Grid.Row="2" Grid.Column="1" x:Name="CFree" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
+                                </Grid>
+                                <ProgressBar x:Name="CDiskProgress" Value="0" Width="200"/>
+                                <Grid Margin="0,8,0,0">
+                                    <TextBlock Text="0%" x:Name="CDiskPercentage" VerticalAlignment="Center" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                                </Grid>
+                            </StackPanel>
+                            <Button x:Name="OpenStorageSettingButton" Click="OpenStorageSettingButton_Click" Content="存储设置" HorizontalAlignment="Right" Grid.Row="1"/>
+                        </Grid>
                     </Border>
                     <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Row="1" Grid.Column="0">
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock Text="硬件信息" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,20"/>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
-                                <TextBlock Grid.Row="0" Grid.Column="0" Text="Windows 版本：" Margin="0,0,0,10" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
-                                <TextBlock Grid.Row="0" Grid.Column="1" x:Name="WindowsVersion" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True" Text="硬件信息加载中..."/>
-                                <TextBlock Grid.Row="1" Grid.Column="0" Text="主板：" Margin="0,0,0,10" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
-                                <TextBlock Grid.Row="1" Grid.Column="1" x:Name="MotherBoard" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True" Text="硬件信息加载中..."/>
-                                <TextBlock Grid.Row="2" Grid.Column="0" Text="处理器：" Margin="0,0,0,10" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
-                                <TextBlock Grid.Row="2" Grid.Column="1" x:Name="CPU" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True" Text="硬件信息加载中..."/>
-                                <TextBlock Grid.Row="3" Grid.Column="0" Text="内存：" Margin="0,0,0,10" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
-                                <TextBlock Grid.Row="3" Grid.Column="1" x:Name="Memory" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True" Text="硬件信息加载中..."/>
-                                <TextBlock Grid.Row="4" Grid.Column="0" Text="显卡：" Margin="0,0,0,10" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
-                                <TextBlock Grid.Row="4" Grid.Column="1" x:Name="GPU" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True" Text="硬件信息加载中..."/>
-                            </Grid>
-                        </StackPanel>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Orientation="Vertical" Grid.Row="0">
+                                <TextBlock Text="硬件信息" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,20"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Windows 版本：" Margin="0,0,0,10" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                                    <TextBlock Grid.Row="0" Grid.Column="1" x:Name="WindowsVersion" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True" Text="硬件信息加载中..."/>
+                                    <TextBlock Grid.Row="1" Grid.Column="0" Text="主板：" Margin="0,0,0,10" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                                    <TextBlock Grid.Row="1" Grid.Column="1" x:Name="MotherBoard" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True" Text="硬件信息加载中..."/>
+                                    <TextBlock Grid.Row="2" Grid.Column="0" Text="处理器：" Margin="0,0,0,10" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                                    <TextBlock Grid.Row="2" Grid.Column="1" x:Name="CPU" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True" Text="硬件信息加载中..."/>
+                                    <TextBlock Grid.Row="3" Grid.Column="0" Text="内存：" Margin="0,0,0,10" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                                    <TextBlock Grid.Row="3" Grid.Column="1" x:Name="Memory" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True" Text="硬件信息加载中..."/>
+                                    <TextBlock Grid.Row="4" Grid.Column="0" Text="显卡：" Margin="0,0,0,10" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                                    <TextBlock Grid.Row="4" Grid.Column="1" x:Name="GPU" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True" Text="硬件信息加载中..."/>
+                                </Grid>
+                            </StackPanel>
+                            <Button HorizontalAlignment="Right" Content="系统信息" x:Name="OpenSystemInfoButton" Click="OpenSystemInfoButton_Click" VerticalAlignment="Bottom" Grid.Row="1"/>
+                        </Grid>
                     </Border>
                     <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Row="1" Grid.Column="1">
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock Text="资源占用" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,20"/>
-                            <TextBlock Text="CPU" Margin="0,0,0,10"/>
-                            <ProgressBar Value="0" Width="200" Margin="0,0,0,8" x:Name="CPUProgress"/>
-                            <TextBlock Text="0%" HorizontalAlignment="Left" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,20" x:Name="CPUPercentage"/>
-                            <TextBlock Text="内存" Margin="0,0,0,10"/>
-                            <ProgressBar Value="0" Width="200" Margin="0,0,0,8" x:Name="RAMProgress"/>
-                            <Grid Margin="0,0,0,10">
-                                <TextBlock Text="0%" VerticalAlignment="Center" Foreground="{ThemeResource TextFillColorSecondaryBrush}" x:Name="RAMPercentage"/>
-                                <TextBlock Text="0 GB / 0 GB" HorizontalAlignment="Right" Foreground="{ThemeResource TextFillColorSecondaryBrush}" x:Name="RAMUsage"/>
-                            </Grid>
-                            <HyperlinkButton HorizontalAlignment="Right" Content="任务管理器" x:Name="OpenTaskmgrButton" Click="OpenTaskmgrButton_Click"/>
-                        </StackPanel>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Orientation="Vertical" Grid.Row="0">
+                                <TextBlock Text="资源占用" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,20"/>
+                                <TextBlock Text="CPU" Margin="0,0,0,10"/>
+                                <ProgressBar Value="0" Width="200" Margin="0,0,0,8" x:Name="CPUProgress"/>
+                                <TextBlock Text="0%" HorizontalAlignment="Left" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,20" x:Name="CPUPercentage"/>
+                                <TextBlock Text="内存" Margin="0,0,0,10"/>
+                                <ProgressBar Value="0" Width="200" Margin="0,0,0,8" x:Name="RAMProgress"/>
+                                <Grid Margin="0,0,0,10">
+                                    <TextBlock Text="0%" VerticalAlignment="Center" Foreground="{ThemeResource TextFillColorSecondaryBrush}" x:Name="RAMPercentage"/>
+                                    <TextBlock Text="0 GB / 0 GB" HorizontalAlignment="Right" Foreground="{ThemeResource TextFillColorSecondaryBrush}" x:Name="RAMUsage"/>
+                                </Grid>
+                            </StackPanel>
+                            <Button HorizontalAlignment="Right" Content="任务管理器" x:Name="OpenTaskmgrButton" Click="OpenTaskmgrButton_Click" VerticalAlignment="Bottom" Grid.Row="1"/>
+                        </Grid>
                     </Border>
                 </Grid>
             </StackPanel>

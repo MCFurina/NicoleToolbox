@@ -462,5 +462,14 @@ namespace NicoleToolbox.Pages
         {
             new WidgetWindow.ClockWindow().Activate();
         }
+
+        private async void OpenSystemInfoButton_Click(object sender, RoutedEventArgs e)
+        {
+            bool success = await Launcher.LaunchUriAsync(new Uri("ms-settings:about"));
+            if (!success)
+            {
+                await ShowError("打开失败，可能您的系统不支持此操作。", "错误");
+            }
+        }
     }
 }
