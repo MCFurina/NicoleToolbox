@@ -447,14 +447,16 @@ namespace NicoleToolbox.Pages
         {
             ContentDialog dialog = new ContentDialog
             {
-                Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style,
                 Title = title,
                 Content = message,
-                CloseButtonText = "确定"
+                CloseButtonText = "确定",
+                XamlRoot = this.Content.XamlRoot,
+                Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style
             };
-
-            dialog.XamlRoot = this.Content.XamlRoot;
-
+            if (this.Content is FrameworkElement rootElement)
+            {
+                dialog.RequestedTheme = rootElement.RequestedTheme;
+            }
             await dialog.ShowAsync();
         }
 

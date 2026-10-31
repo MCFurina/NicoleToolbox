@@ -11,7 +11,7 @@
     <Grid>
         <ScrollView ContentOrientation="Both" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" MaxWidth="1024">
             <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="36,40,0,0">
-                <TextBlock Text="系统工具" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,36"/>
+                <TextBlock Text="工具" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,36"/>
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -73,6 +73,16 @@
                             </Grid.RowDefinitions>
                             <TextBlock Grid.Row="0" Text="计算机管理" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
                             <Button Grid.Row="1" Content="打开" x:Name="compmgmt" Click="compmgmt_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                        </Grid>
+                    </Border>
+                    <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Column="1" Grid.Row="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Text="GitHub下载加速" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
+                            <Button Grid.Row="1" Content="打开" x:Name="ghproxy" Click="ghproxy_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
                         </Grid>
                     </Border>
                 </Grid>

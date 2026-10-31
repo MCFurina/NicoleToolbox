@@ -11,6 +11,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -89,18 +90,20 @@ namespace NicoleToolbox.Pages
             }
         }
 
-        public async void ShowError(string message, string title)
+        private async void ShowError(string message, string title)
         {
             ContentDialog dialog = new ContentDialog
             {
-                Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style,
                 Title = title,
                 Content = message,
-                CloseButtonText = "确定"
+                CloseButtonText = "确定",
+                XamlRoot = this.Content.XamlRoot,
+                Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style
             };
-
-            dialog.XamlRoot = this.Content.XamlRoot;
-
+            if (this.Content is FrameworkElement rootElement)
+            {
+                dialog.RequestedTheme = rootElement.RequestedTheme;
+            }
             await dialog.ShowAsync();
         }
 
@@ -114,6 +117,11 @@ namespace NicoleToolbox.Pages
             {
                 ShowError("打开失败，可能您的系统不支持此操作。\n错误信息：" + ex.Message, "错误");
             }
+        }
+
+        private void ghproxy_Click(object sender, RoutedEventArgs e)
+        {
+            new WidgetWindow.GitHubProxyWindow().Activate();
         }
     }
 }

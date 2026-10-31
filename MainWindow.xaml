@@ -26,7 +26,7 @@
         <NavigationView x:Name="Nav" SelectionChanged="Nav_SelectionChanged" IsSettingsVisible="False" IsBackButtonVisible="Collapsed" PaneDisplayMode="Left" OpenPaneLength="200" Grid.Row="1" IsPaneToggleButtonVisible="False">
             <NavigationView.MenuItems>
                 <NavigationViewItem Icon="Home" Content="主页" Tag="Home" x:Name="Nav_HomeItem"/>
-                <NavigationViewItem Icon="Repair" Content="系统工具" Tag="Tools"/>
+                <NavigationViewItem Icon="Repair" Content="工具" Tag="Tools"/>
                 <NavigationViewItem Content="关于" Tag="About">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE946;" />
