@@ -12,13 +12,35 @@
         <ScrollView ContentOrientation="Both" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" MaxWidth="1024">
             <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="36,40,0,0">
                 <TextBlock Text="工具" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,36"/>
+                <TextBlock Text="内置工具" HorizontalAlignment="Left" Style="{StaticResource BodyLargeTextBlockStyle}" Margin="0,0,0,10"/>
                 <Grid>
                     <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Column="0" Grid.Row="0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Text="GitHub下载加速" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
+                            <Button Grid.Row="1" Content="打开" x:Name="ghproxy" Click="ghproxy_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+                <TextBlock Text="系统工具" HorizontalAlignment="Left" Style="{StaticResource BodyLargeTextBlockStyle}" Margin="0,10,0,10"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
@@ -45,7 +67,7 @@
                             <Button Grid.Row="1" Content="打开" x:Name="taskmgr" Click="taskmgr_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
                         </Grid>
                     </Border>
-                    <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Column="0" Grid.Row="1">
+                    <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Column="2" Grid.Row="0">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
@@ -55,7 +77,7 @@
                             <Button Grid.Row="1" Content="打开" x:Name="devmgmt" Click="devmgmt_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
                         </Grid>
                     </Border>
-                    <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Column="1" Grid.Row="1">
+                    <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Column="0" Grid.Row="1">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
@@ -65,7 +87,7 @@
                             <Button Grid.Row="1" Content="打开" x:Name="advanced_system_settings" Click="advanced_system_settings_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
                         </Grid>
                     </Border>
-                    <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Column="0" Grid.Row="2">
+                    <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Column="1" Grid.Row="1">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
@@ -73,16 +95,6 @@
                             </Grid.RowDefinitions>
                             <TextBlock Grid.Row="0" Text="计算机管理" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
                             <Button Grid.Row="1" Content="打开" x:Name="compmgmt" Click="compmgmt_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
-                        </Grid>
-                    </Border>
-                    <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Column="1" Grid.Row="2">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <TextBlock Grid.Row="0" Text="GitHub下载加速" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
-                            <Button Grid.Row="1" Content="打开" x:Name="ghproxy" Click="ghproxy_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
                         </Grid>
                     </Border>
                 </Grid>
