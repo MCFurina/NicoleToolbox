@@ -18,6 +18,7 @@
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
@@ -51,6 +52,17 @@
                             <HyperlinkButton Content="GitHub" NavigateUri="https://github.com/MCFurina/NicoleToolbox"/>
                             <HyperlinkButton Content="反馈问题" NavigateUri="https://github.com/MCFurina/NicoleToolbox/issues"/>
                             <HyperlinkButton Content="获取最新版本" NavigateUri="https://github.com/MCFurina/NicoleToolbox/releases/"/>
+                        </StackPanel>
+                    </Border>
+                    <Border Style="{StaticResource CardBorderStyle}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="10">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="贡献者" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
+                            <Border Style="{StaticResource CardBorderStyle}" CornerRadius="4" Padding="10,4">
+                                <Grid>
+                                    <TextBlock Text="MCFurina" VerticalAlignment="Center"/>
+                                    <HyperlinkButton Content="主页" NavigateUri="https://github.com/MCFurina" HorizontalAlignment="Right"/>
+                                </Grid>
+                            </Border>
                         </StackPanel>
                     </Border>
                 </Grid>

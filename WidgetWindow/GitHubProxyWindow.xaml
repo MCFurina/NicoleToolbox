@@ -14,7 +14,11 @@
     </Window.SystemBackdrop>
 
     <Grid>
-        <ScrollView>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Row="0">
             <StackPanel Orientation="Vertical">
                 <Border Style="{StaticResource CardBorderStyle}" Margin="10" x:Name="InputCard">
                     <Grid>
@@ -25,6 +29,12 @@
                         <TextBox PlaceholderText="输入 GitHub 链接" Grid.Column="0" x:Name="Input"/>
                         <Button Style="{StaticResource AccentButtonStyle}" Content="转换" Grid.Column="1" Margin="10,0,0,0" x:Name="ConvertButton" Click="ConvertButton_Click"/>
                     </Grid>
+                </Border>
+                <Border Style="{StaticResource CardBorderStyle}" x:Name="TeachCard" Visibility="Visible" Margin="10">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="教学" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
+                        <TextBlock Text="只需要把 GitHub 的下载链接复制到输入框，再点击转换即可输出加速后的链接"/>
+                    </StackPanel>
                 </Border>
                 <Border Style="{StaticResource CardBorderStyle}" x:Name="OutputCard" Visibility="Collapsed" Margin="10">
                     <StackPanel Orientation="Vertical">
@@ -118,11 +128,6 @@
                 </Border>
             </StackPanel>
         </ScrollView>
-        <TextBlock Text="下载服务由 gh-proxy.com 提供" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
-        <Border Style="{StaticResource CardBorderStyle}" x:Name="TeachCard" Visibility="Visible" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <StackPanel Orientation="Vertical">
-                <TextBlock Text="只需要把 GitHub 的下载链接复制到输入框，再点击转换即可输出加速后的链接" Style="{StaticResource BodyLargeStrongTextBlockStyle}" HorizontalAlignment="Center"/>
-            </StackPanel>
-        </Border>
+        <HyperlinkButton Content="下载服务由 gh-proxy.com 提供" VerticalAlignment="Bottom" HorizontalAlignment="Center" NavigateUri="https://gh-proxy.com/" Grid.Row="1"/>
     </Grid>
 </Window>
