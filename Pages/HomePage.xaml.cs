@@ -163,19 +163,35 @@ namespace NicoleToolbox.Pages
 
         private void DiskCInfo()
         {
-            DriveInfo cDrive = new DriveInfo("C");
-            long totalBytes = cDrive.TotalSize;
-            long freeBytes = cDrive.AvailableFreeSpace;
-            long usedBytes = totalBytes - freeBytes;
-            double totalGB = totalBytes / 1024.0 / 1024.0 / 1024.0;
-            double freeGB = freeBytes / 1024.0 / 1024.0 / 1024.0;
-            double usedGB = usedBytes / 1024.0 / 1024.0 / 1024.0;
-            CTotal.Text = $"{totalGB:F1} GB";
-            CUsed.Text = $"{usedGB:F1} GB";
-            CFree.Text = $"{freeGB:F1} GB";
-            double CDiskProgressValue = (usedBytes * 1.0 / totalBytes) * 100;
-            CDiskProgress.Value = CDiskProgressValue;
-            CDiskPercentage.Text = $"{CDiskProgressValue:F1}%";
+            try
+            {
+                DriveInfo cDrive = new DriveInfo("C");
+                long totalBytes = cDrive.TotalSize;
+                long freeBytes = cDrive.AvailableFreeSpace;
+                long usedBytes = totalBytes - freeBytes;
+                double totalGB = totalBytes / 1024.0 / 1024.0 / 1024.0;
+                double freeGB = freeBytes / 1024.0 / 1024.0 / 1024.0;
+                double usedGB = usedBytes / 1024.0 / 1024.0 / 1024.0;
+                CTotal.Text = $"{totalGB:F1} GB";
+                CUsed.Text = $"{usedGB:F1} GB";
+                CFree.Text = $"{freeGB:F1} GB";
+                double CDiskProgressValue = usedBytes * 1.0 / totalBytes * 100;
+                CDiskProgress.IsIndeterminate = false;
+                CDiskProgress.ShowError = false;
+                CDiskProgress.Value = CDiskProgressValue;
+                CDiskPercentage.Text = $"{CDiskProgressValue:F1}%";
+            }
+            catch (Exception ex)
+            {
+                CTotal.Text = "读取失败";
+                CUsed.Text = "读取失败";
+                CFree.Text = "读取失败";
+                CDiskProgress.Value = 0;
+                CDiskProgress.IsIndeterminate = true;
+                CDiskProgress.ShowError = true;
+                CDiskPercentage.Text = "读取失败";
+                Debug.WriteLine($"DiskCInfo failed: {ex.Message}");
+            }
         }
 
         private void WindowsVersionLoad()

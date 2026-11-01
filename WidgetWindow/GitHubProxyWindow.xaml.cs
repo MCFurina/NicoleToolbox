@@ -58,8 +58,21 @@ namespace NicoleToolbox.WidgetWindow
             }
             if (!inputlink.StartsWith("https://github.com/", StringComparison.OrdinalIgnoreCase))
             {
-                ShowError("请输入正确的 GitHub 链接！", "提示");
-                return;
+                if (inputlink.StartsWith("github.com/", StringComparison.OrdinalIgnoreCase))
+                {
+                    inputlink = "https://" + inputlink;
+                    Input.Text = inputlink;
+                }
+                else if (inputlink.StartsWith("http://github.com/", StringComparison.OrdinalIgnoreCase))
+                {
+                    inputlink = inputlink.Replace("http://", "https://", StringComparison.OrdinalIgnoreCase);
+                    Input.Text = inputlink;
+                }
+                else
+                {
+                    ShowError("请输入正确的 GitHub 链接！", "提示");
+                    return;
+                }
             }
             OutputCard.Visibility = Visibility.Visible;
             TeachCard.Visibility = Visibility.Collapsed;
