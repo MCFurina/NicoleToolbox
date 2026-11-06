@@ -1,7 +1,7 @@
 # NicoleToolbox
 <img src="./Assets/NicoleToolbox.ico" alt="NicoleToolbox Logo" width="128" />
 
-简体中文 | [English](./README-en.md)
+简体中文 | [English](./README_en.md)
 ### 基于 WinUI3 制作的简单工具箱，打开即是实用主页，并内置一些实用小工具
 <img src="./Images/zh-CN/Home.png" alt="NicoleToolbox Home" width="800" />
 
