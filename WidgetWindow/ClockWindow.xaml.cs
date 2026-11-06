@@ -6,6 +6,7 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using Microsoft.Windows.ApplicationModel.Resources;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -30,6 +31,7 @@ namespace NicoleToolbox.WidgetWindow
 
         public ClockWindow()
         {
+            var resourceLoader = new ResourceLoader();
             InitializeComponent();
             this.AppWindow.Resize(new SizeInt32(600, 400));
             this.AppWindow.SetIcon("Assets/NicoleToolbox.ico");
@@ -38,6 +40,7 @@ namespace NicoleToolbox.WidgetWindow
                 this.AppWindow.TitleBar.PreferredTheme = TitleBarTheme.UseDefaultAppMode;
             }
             catch { }
+            this.AppWindow.Title = resourceLoader.GetString("ClockWindow_WindowTitle");
             _timer = new DispatcherTimer();
             _timer.Interval = TimeSpan.FromSeconds(1);
             _timer.Tick += (s, e) => UpdateTime();
@@ -48,9 +51,10 @@ namespace NicoleToolbox.WidgetWindow
 
         private void UpdateTime()
         {
+            var resourceLoader = new ResourceLoader();
             var now = DateTime.Now;
             TimeText.Text = now.ToString("HH:mm:ss");
-            DateText.Text = now.ToString("yyyy年MM月dd日 dddd", new CultureInfo("zh-CN"));
+            DateText.Text = now.ToString(resourceLoader.GetString("Date_Format"), new CultureInfo(resourceLoader.GetString("App_LangCode")));
         }
 
         private void TopSwitch_Checked(object sender, RoutedEventArgs e)

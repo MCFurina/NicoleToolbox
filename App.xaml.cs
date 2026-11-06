@@ -34,6 +34,8 @@ namespace NicoleToolbox
         /// </summary>
         public App()
         {
+            // Only for debug: force app language
+            // Microsoft.Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = "en-US";
             InitializeComponent();
         }
 

@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Home_DiskCStatusCard_Title.Text" xml:space="preserve">
+    <value>C槽使用情況</value>
+  </data>
+  <data name="Home_DiskC_TotalLabel.Text" xml:space="preserve">
+    <value>容量：</value>
+  </data>
+  <data name="Home_DiskC_UsedLabel.Text" xml:space="preserve">
+    <value>已用空間：</value>
+  </data>
+  <data name="Home_DiskC_FreeLabel.Text" xml:space="preserve">
+    <value>剩餘空間：</value>
+  </data>
+  <data name="Home_Greeting_Afternoon" xml:space="preserve">
+    <value>下午好，{0}。</value>
+  </data>
+  <data name="Home_Greeting_EarlyMorning" xml:space="preserve">
+    <value>早安，{0}。</value>
+  </data>
+  <data name="Home_Greeting_Evening" xml:space="preserve">
+    <value>晚上好，{0}。</value>
+  </data>
+  <data name="Home_Greeting_Forenoon" xml:space="preserve">
+    <value>上午好，{0}。</value>
+  </data>
+  <data name="Home_Greeting_Night" xml:space="preserve">
+    <value>夜深了，{0}，請注意休息。</value>
+  </data>
+  <data name="Home_Greeting_Noon" xml:space="preserve">
+    <value>中午好，{0}。</value>
+  </data>
+  <data name="Home_HardwareInfoCard_Title.Text" xml:space="preserve">
+    <value>硬體資訊</value>
+  </data>
+  <data name="Home_Hardware_CPULabel.Text" xml:space="preserve">
+    <value>處理器：</value>
+  </data>
+  <data name="Home_Hardware_GPULabel.Text" xml:space="preserve">
+    <value>顯示卡：</value>
+  </data>
+  <data name="Home_Hardware_MBLabel.Text" xml:space="preserve">
+    <value>主機板：</value>
+  </data>
+  <data name="Home_Hardware_RAMLabel.Text" xml:space="preserve">
+    <value>記憶體：</value>
+  </data>
+  <data name="Home_Hardware_WinVerLabel.Text" xml:space="preserve">
+    <value>Windows 版本：</value>
+  </data>
+  <data name="Home_OpenClockWindow.Content" xml:space="preserve">
+    <value>開啟時鐘視窗</value>
+  </data>
+  <data name="Home_OpenStorageSettingButton.Content" xml:space="preserve">
+    <value>儲存空間設定</value>
+  </data>
+  <data name="Home_OpenSystemInfoButton.Content" xml:space="preserve">
+    <value>系統資訊</value>
+  </data>
+  <data name="Home_OpenSystemSettingsButton.Content" xml:space="preserve">
+    <value>系統設定</value>
+  </data>
+  <data name="Home_OpenTaskmgrButton.Content" xml:space="preserve">
+    <value>工作管理員</value>
+  </data>
+  <data name="Home_ResourceUsageCard_Title.Text" xml:space="preserve">
+    <value>資源佔用</value>
+  </data>
+  <data name="Home_Resource_CPULabel.Text" xml:space="preserve">
+    <value>CPU</value>
+  </data>
+  <data name="Home_Resource_RAMLabel.Text" xml:space="preserve">
+    <value>RAM</value>
+  </data>
+  <data name="Home_TimeCard_Title.Text" xml:space="preserve">
+    <value>即時時間</value>
+  </data>
+  <data name="Main_Nav_Item_About.Content" xml:space="preserve">
+    <value>關於</value>
+  </data>
+  <data name="Main_Nav_Item_Home.Content" xml:space="preserve">
+    <value>首頁</value>
+  </data>
+  <data name="Main_Nav_Item_Tools.Content" xml:space="preserve">
+    <value>工具</value>
+  </data>
+  <data name="Home_WindowsEdition_Core" xml:space="preserve">
+    <value>家用版</value>
+  </data>
+  <data name="Home_WindowsEdition_CoreCountrySpecific" xml:space="preserve">
+    <value>家用中文版</value>
+  </data>
+  <data name="Home_WindowsEdition_CoreSingleLanguage" xml:space="preserve">
+    <value>家用單語言版 </value>
+  </data>
+  <data name="Home_WindowsEdition_Professional" xml:space="preserve">
+    <value>專業版</value>
+  </data>
+  <data name="Home_WindowsEdition_ProfessionalWorkstation" xml:space="preserve">
+    <value>專業工作站版</value>
+  </data>
+  <data name="Home_WindowsEdition_Education" xml:space="preserve">
+    <value>教育版</value>
+  </data>
+  <data name="Home_WindowsEdition_Enterprise" xml:space="preserve">
+    <value>企業版</value>
+  </data>
+  <data name="Home_WindowsEdition_EnterpriseS" xml:space="preserve">
+    <value>LTSC 長期服務版</value>
+  </data>
+  <data name="Dialog_OK" xml:space="preserve">
+    <value>確定</value>
+  </data>
+  <data name="App_LangCode" xml:space="preserve">
+    <value>zh-HK</value>
+  </data>
+  <data name="Date_Format" xml:space="preserve">
+    <value>yyyy年MM月dd日 dddd</value>
+  </data>
+  <data name="ClockWindow_WindowTitle" xml:space="preserve">
+    <value>時鐘視窗</value>
+  </data>
+  <data name="ClockWindow_TopWindowToggle.Content" xml:space="preserve">
+    <value>視窗置頂</value>
+  </data>
+</root>

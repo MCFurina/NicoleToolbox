@@ -7,14 +7,14 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Title="窗口化时钟">
+    Title="Clock Window">
 
     <Window.SystemBackdrop>
         <MicaBackdrop />
     </Window.SystemBackdrop>
 
     <Grid>
-        <CheckBox x:Name="TopSwitch" Content="启用置顶" Checked="TopSwitch_Checked" Unchecked="TopSwitch_Unchecked" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+        <CheckBox x:Name="TopSwitch" x:Uid="ClockWindow_TopWindowToggle" Checked="TopSwitch_Checked" Unchecked="TopSwitch_Unchecked" VerticalAlignment="Top" HorizontalAlignment="Right"/>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Text="Time" x:Name="TimeText" FontSize="80" HorizontalAlignment="Center" Margin="0,0,0,20"/>
             <TextBlock Text="Date And Week" x:Name="DateText" FontSize="30" HorizontalAlignment="Center" Margin="0,0,0,20"/>

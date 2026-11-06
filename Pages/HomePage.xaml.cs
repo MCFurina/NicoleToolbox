@@ -6,8 +6,10 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using Microsoft.Win32;
+using Microsoft.Windows.ApplicationModel.Resources;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -18,7 +20,6 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.System;
 using Windows.System.Diagnostics;
-using System.Diagnostics;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -99,16 +100,18 @@ namespace NicoleToolbox.Pages
             var now = DateTime.Now;
             int hour = now.Hour;
             string userName = Environment.UserName;
-
-            return hour switch
+            var resourceLoader = new ResourceLoader();
+            string resourceKey = hour switch
             {
-                >= 5 and < 9 => $"早上好，{userName}。",
-                >= 9 and < 12 => $"上午好，{userName}。",
-                >= 12 and < 14 => $"中午好，{userName}。",
-                >= 14 and < 18 => $"下午好，{userName}。",
-                >= 18 and < 23 => $"晚上好，{userName}。",
-                _ => $"夜深了，{userName}，请注意休息。"
+                >= 5 and < 9 => "Home_Greeting_EarlyMorning",
+                >= 9 and < 12 => "Home_Greeting_Forenoon",
+                >= 12 and < 14 => "Home_Greeting_Noon",
+                >= 14 and < 18 => "Home_Greeting_Afternoon",
+                >= 18 and < 23 => "Home_Greeting_Evening",
+                _ => "Home_Greeting_Night"
             };
+            string formatTemplate = resourceLoader.GetString(resourceKey);
+            return string.Format(formatTemplate, userName);
         }
 
         private void GreetingTextLoad()
@@ -137,9 +140,10 @@ namespace NicoleToolbox.Pages
 
         private void UpdateTime()
         {
+            var resourceLoader = new ResourceLoader();
             var now = DateTime.Now;
             TimeText.Text = now.ToString("HH:mm:ss");
-            DateText.Text = now.ToString("yyyy年MM月dd日 dddd", new CultureInfo("zh-CN"));
+            DateText.Text = now.ToString(resourceLoader.GetString("Date_Format"), new CultureInfo(resourceLoader.GetString("App_LangCode")));
         }
 
         private void UpdateUsage()
@@ -196,6 +200,7 @@ namespace NicoleToolbox.Pages
 
         private void WindowsVersionLoad()
         {
+            var resourceLoader = new ResourceLoader();
             // Get Windows Version
             int windowsbuild = 0;
             string windowsversion = "未知";
@@ -248,14 +253,14 @@ namespace NicoleToolbox.Pages
             }
             string edition = editionId switch
             {
-                "Core" => "家庭版",
-                "CoreCountrySpecific" => "家庭中文版",
-                "CoreSingleLanguage" => "家庭单语言版",
-                "Professional" => "专业版",
-                "ProfessionalWorkstation" => "工作站版",
-                "Education" => "教育版",
-                "Enterprise" => "企业版",
-                "EnterpriseS" => "LTSC 长期服务版",
+                "Core" => resourceLoader.GetString("Home_WindowsEdition_Core"),
+                "CoreCountrySpecific" => resourceLoader.GetString("Home_WindowsEdition_CoreCountrySpecific"),
+                "CoreSingleLanguage" => resourceLoader.GetString("Home_WindowsEdition_CoreSingleLanguage"),
+                "Professional" => resourceLoader.GetString("Home_WindowsEdition_Professional"),
+                "ProfessionalWorkstation" => resourceLoader.GetString("Home_WindowsEdition_ProfessionalWorkstation"),
+                "Education" => resourceLoader.GetString("Home_WindowsEdition_Education"),
+                "Enterprise" => resourceLoader.GetString("Home_WindowsEdition_Enterprise"),
+                "EnterpriseS" => resourceLoader.GetString("Home_WindowsEdition_EnterpriseS"),
                 _ => editionId
             };
 
@@ -461,11 +466,12 @@ namespace NicoleToolbox.Pages
 
         private async Task ShowError(string message, string title)
         {
+            var resourceLoader = new ResourceLoader();
             ContentDialog dialog = new ContentDialog
             {
                 Title = title,
                 Content = message,
-                CloseButtonText = "确定",
+                CloseButtonText = resourceLoader.GetString("Dialog_OK"),
                 XamlRoot = this.Content.XamlRoot,
                 Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style
             };

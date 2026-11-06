@@ -37,11 +37,11 @@
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Grid.Row="0" Grid.Column="0" Text="版本 " Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
+                                <TextBlock Grid.Row="0" Grid.Column="0" Text="应用：" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
                                 <TextBlock Grid.Row="0" Grid.Column="1" x:Name="AppVersion" Margin="10,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
-                                <TextBlock Grid.Row="1" Grid.Column="0" Text=".NET 环境版本 " Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
+                                <TextBlock Grid.Row="1" Grid.Column="0" Text=".NET 桌面运行时：" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
                                 <TextBlock Grid.Row="1" Grid.Column="1" x:Name="DotnetVersion" Margin="10,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
-                                <TextBlock Grid.Row="2" Grid.Column="0" Text="Windows APP SDK 版本 " Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
+                                <TextBlock Grid.Row="2" Grid.Column="0" Text="Windows App Runtime：" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
                                 <TextBlock Grid.Row="2" Grid.Column="1" x:Name="WinAppSdkVersion" Margin="10,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
                             </Grid>
                         </StackPanel>
