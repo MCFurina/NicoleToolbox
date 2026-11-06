@@ -60,11 +60,11 @@
                                         <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
                                     <TextBlock Grid.Row="0" Grid.Column="0" x:Uid="Home_DiskC_TotalLabel" Margin="0,0,0,10"/>
-                                    <TextBlock Grid.Row="0" Grid.Column="1" x:Name="CTotal" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
+                                    <TextBlock Grid.Row="0" Grid.Column="1" x:Name="CTotal" Margin="10,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
                                     <TextBlock Grid.Row="1" Grid.Column="0" x:Uid="Home_DiskC_UsedLabel" Margin="0,0,0,10"/>
-                                    <TextBlock Grid.Row="1" Grid.Column="1" x:Name="CUsed" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
+                                    <TextBlock Grid.Row="1" Grid.Column="1" x:Name="CUsed" Margin="10,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
                                     <TextBlock Grid.Row="2" Grid.Column="0" x:Uid="Home_DiskC_FreeLabel" Margin="0,0,0,10"/>
-                                    <TextBlock Grid.Row="2" Grid.Column="1" x:Name="CFree" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
+                                    <TextBlock Grid.Row="2" Grid.Column="1" x:Name="CFree" Margin="10,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
                                 </Grid>
                                 <ProgressBar x:Name="CDiskProgress" Value="0" Width="200"/>
                                 <Grid Margin="0,8,0,0">
@@ -95,15 +95,15 @@
                                         <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
                                     <TextBlock Grid.Row="0" Grid.Column="0" x:Uid="Home_Hardware_WinVerLabel" Margin="0,0,0,10" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
-                                    <TextBlock Grid.Row="0" Grid.Column="1" x:Name="WindowsVersion" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
+                                    <TextBlock Grid.Row="0" Grid.Column="1" x:Name="WindowsVersion" Margin="10,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
                                     <TextBlock Grid.Row="1" Grid.Column="0" x:Uid="Home_Hardware_MBLabel" Margin="0,0,0,10" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
-                                    <TextBlock Grid.Row="1" Grid.Column="1" x:Name="MotherBoard" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
+                                    <TextBlock Grid.Row="1" Grid.Column="1" x:Name="MotherBoard" Margin="10,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
                                     <TextBlock Grid.Row="2" Grid.Column="0" x:Uid="Home_Hardware_CPULabel" Margin="0,0,0,10" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
-                                    <TextBlock Grid.Row="2" Grid.Column="1" x:Name="CPU" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
+                                    <TextBlock Grid.Row="2" Grid.Column="1" x:Name="CPU" Margin="10,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
                                     <TextBlock Grid.Row="3" Grid.Column="0" x:Uid="Home_Hardware_RAMLabel" Margin="0,0,0,10" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
-                                    <TextBlock Grid.Row="3" Grid.Column="1" x:Name="Memory" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
+                                    <TextBlock Grid.Row="3" Grid.Column="1" x:Name="Memory" Margin="10,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
                                     <TextBlock Grid.Row="4" Grid.Column="0" x:Uid="Home_Hardware_GPULabel" Margin="0,0,0,10" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
-                                    <TextBlock Grid.Row="4" Grid.Column="1" x:Name="GPU" Margin="0,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
+                                    <TextBlock Grid.Row="4" Grid.Column="1" x:Name="GPU" Margin="10,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
                                 </Grid>
                             </StackPanel>
                             <Button HorizontalAlignment="Right" x:Uid="Home_OpenSystemInfoButton" x:Name="OpenSystemInfoButton" Click="OpenSystemInfoButton_Click" VerticalAlignment="Bottom" Grid.Row="1"/>

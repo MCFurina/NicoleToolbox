@@ -11,10 +11,10 @@
     <Grid>
         <ScrollView ContentOrientation="Both" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" MaxWidth="1024">
             <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="36,40,0,0">
-                <TextBlock Text="关于" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,36"/>
+                <TextBlock x:Uid="About_PageTitle" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,36"/>
                 <Image Source="/Assets/NicoleToolbox.ico" Width="80" Height="80" HorizontalAlignment="Left" Margin="0,0,0,10"/>
                 <TextBlock Text="NicoleToolbox" HorizontalAlignment="Left" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,20"/>
-                <TextBlock Text="基于 WinUI3 制作的简单工具箱" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,20"/>
+                <TextBlock x:Uid="About_AppDescription" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,20"/>
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
@@ -26,7 +26,7 @@
                     </Grid.ColumnDefinitions>
                     <Border Style="{StaticResource CardBorderStyle}" Grid.Row="0" Grid.Column="0" Margin="10">
                         <StackPanel Orientation="Vertical">
-                            <TextBlock Text="版本信息" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,20"/>
+                            <TextBlock x:Uid="About_VersionInfoCard_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,20"/>
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
@@ -37,30 +37,30 @@
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Grid.Row="0" Grid.Column="0" Text="应用：" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
+                                <TextBlock Grid.Row="0" Grid.Column="0" x:Uid="About_VersionInfoCard_AppVersion" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
                                 <TextBlock Grid.Row="0" Grid.Column="1" x:Name="AppVersion" Margin="10,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
-                                <TextBlock Grid.Row="1" Grid.Column="0" Text=".NET 桌面运行时：" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
+                                <TextBlock Grid.Row="1" Grid.Column="0" x:Uid="About_VersionInfoCard_DotnetVersion" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
                                 <TextBlock Grid.Row="1" Grid.Column="1" x:Name="DotnetVersion" Margin="10,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
-                                <TextBlock Grid.Row="2" Grid.Column="0" Text="Windows App Runtime：" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
+                                <TextBlock Grid.Row="2" Grid.Column="0" x:Uid="About_VersionInfoCard_WinAppSdkVersion" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
                                 <TextBlock Grid.Row="2" Grid.Column="1" x:Name="WinAppSdkVersion" Margin="10,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
                             </Grid>
                         </StackPanel>
                     </Border>
                     <Border Style="{StaticResource CardBorderStyle}" Grid.Row="0" Grid.Column="1" Margin="10">
                         <StackPanel Orientation="Vertical">
-                            <TextBlock Text="链接" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,20"/>
-                            <HyperlinkButton Content="GitHub" NavigateUri="https://github.com/MCFurina/NicoleToolbox"/>
-                            <HyperlinkButton Content="反馈问题" NavigateUri="https://github.com/MCFurina/NicoleToolbox/issues"/>
-                            <HyperlinkButton Content="获取最新版本" NavigateUri="https://github.com/MCFurina/NicoleToolbox/releases/"/>
+                            <TextBlock x:Uid="About_LinksCard_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,20"/>
+                            <HyperlinkButton x:Uid="About_LinksCard_GitHub" NavigateUri="https://github.com/MCFurina/NicoleToolbox"/>
+                            <HyperlinkButton x:Uid="About_LinksCard_Issues" NavigateUri="https://github.com/MCFurina/NicoleToolbox/issues"/>
+                            <HyperlinkButton x:Uid="About_LinksCard_Release" NavigateUri="https://github.com/MCFurina/NicoleToolbox/releases/"/>
                         </StackPanel>
                     </Border>
                     <Border Style="{StaticResource CardBorderStyle}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="10">
                         <StackPanel Orientation="Vertical">
-                            <TextBlock Text="贡献者" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
+                            <TextBlock x:Uid="About_ContributorsCard_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
                             <Border Style="{StaticResource CardBorderStyle}" CornerRadius="4" Padding="10,4">
                                 <Grid>
                                     <TextBlock Text="MCFurina" VerticalAlignment="Center"/>
-                                    <HyperlinkButton Content="主页" NavigateUri="https://github.com/MCFurina" HorizontalAlignment="Right"/>
+                                    <HyperlinkButton x:Uid="About_ContributorsCard_GoHomeButton" Content="主页" NavigateUri="https://github.com/MCFurina" HorizontalAlignment="Right"/>
                                 </Grid>
                             </Border>
                         </StackPanel>

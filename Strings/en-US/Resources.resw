@@ -240,4 +240,118 @@
   <data name="ClockWindow_TopWindowToggle.Content" xml:space="preserve">
     <value>Always on Top</value>
   </data>
+  <data name="Tools_PageTitle.Text" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="Tools_Built-inTools.Text" xml:space="preserve">
+    <value>Built-in Tools</value>
+  </data>
+  <data name="Tools_SystemTools.Text" xml:space="preserve">
+    <value>System Tools</value>
+  </data>
+  <data name="About_PageTitle.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="About_AppDescription.Text" xml:space="preserve">
+    <value>A simple toolbox built with WinUI 3.</value>
+  </data>
+  <data name="About_VersionInfoCard_Title.Text" xml:space="preserve">
+    <value>Version Info</value>
+  </data>
+  <data name="About_LinksCard_Title.Text" xml:space="preserve">
+    <value>Links</value>
+  </data>
+  <data name="About_ContributorsCard_Title.Text" xml:space="preserve">
+    <value>Contributors</value>
+  </data>
+  <data name="About_ContributorsCard_GoHomeButton.Content" xml:space="preserve">
+    <value>GitHub Profile</value>
+  </data>
+  <data name="About_LinksCard_GitHub.Content" xml:space="preserve">
+    <value>GitHub Repository</value>
+  </data>
+  <data name="About_LinksCard_Issues.Content" xml:space="preserve">
+    <value>Report an Issue</value>
+  </data>
+  <data name="About_LinksCard_Release.Content" xml:space="preserve">
+    <value>Get Latest Version</value>
+  </data>
+  <data name="About_VersionInfoCard_AppVersion.Text" xml:space="preserve">
+    <value>App: </value>
+  </data>
+  <data name="About_VersionInfoCard_DotnetVersion.Text" xml:space="preserve">
+    <value>.NET Desktop Runtime: </value>
+  </data>
+  <data name="About_VersionInfoCard_WinAppSdkVersion.Text" xml:space="preserve">
+    <value>Windows App Runtime: </value>
+  </data>
+  <data name="Dialog_Title_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Dialog_OpenError" xml:space="preserve">
+    <value>Failed to open. Your system may not support this operation. </value>
+  </data>
+  <data name="Dialog_ErrorInfo" xml:space="preserve">
+    <value>Error details: </value>
+  </data>
+  <data name="Tools_OpenButton.Content" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="Tools_AdminOpenButton.Content" xml:space="preserve">
+    <value>Run as administrator</value>
+  </data>
+  <data name="Tools_GitHubAccel_Title.Text" xml:space="preserve">
+    <value>GitHub Download Proxy</value>
+  </data>
+  <data name="Tools_Terminal_Title.Text" xml:space="preserve">
+    <value>Terminal</value>
+  </data>
+  <data name="Tools_TaskManager_Title.Text" xml:space="preserve">
+    <value>Task Manager</value>
+  </data>
+  <data name="Tools_DeviceManager_Title.Text" xml:space="preserve">
+    <value>Device Manager</value>
+  </data>
+  <data name="Tools_AdvancedSystem_Title.Text" xml:space="preserve">
+    <value>Advanced System Settings</value>
+  </data>
+  <data name="Tools_ComputerManagement_Title.Text" xml:space="preserve">
+    <value>Computer Management</value>
+  </data>
+  <data name="GitHubProxyWindow_InputBox.PlaceholderText" xml:space="preserve">
+    <value>Enter GitHub Link</value>
+  </data>
+  <data name="GitHubProxyWindow_BottomLinkButton.Content" xml:space="preserve">
+    <value>Download service provided by gh-proxy.com</value>
+  </data>
+  <data name="GitHubProxyWindow_ConvertButton.Content" xml:space="preserve">
+    <value>Convert</value>
+  </data>
+  <data name="GitHubProxyWindow_TeachCard_Title.Text" xml:space="preserve">
+    <value>Tutorial</value>
+  </data>
+  <data name="GitHubProxyWindow_TeachCard_Content.Text" xml:space="preserve">
+    <value>Simply copy the GitHub download link into the input box, then click Convert to output the accelerated link.</value>
+  </data>
+  <data name="GitHubProxyWindow_WindowTitle" xml:space="preserve">
+    <value>GitHub Download Proxy</value>
+  </data>
+  <data name="Dialog_Tip" xml:space="preserve">
+    <value>Tip</value>
+  </data>
+  <data name="GitHubProxyWindow_InputError" xml:space="preserve">
+    <value>Please enter a valid GitHub link!</value>
+  </data>
+  <data name="GitHubProxyWindow_OutputCard_Title.Text" xml:space="preserve">
+    <value>Accelerated Download Links</value>
+  </data>
+  <data name="GitHubProxyWindow_OpenButton.Content" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="GitHubProxyWindow_CopyButton.Content" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="GithubProxyWindow_CopyButton_Click" xml:space="preserve">
+    <value>Copied</value>
+  </data>
 </root>

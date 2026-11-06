@@ -5,6 +5,7 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using Microsoft.Windows.ApplicationModel.Resources;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -32,71 +33,77 @@ namespace NicoleToolbox.Pages
 
         private void shell_Click(object sender, RoutedEventArgs e)
         {
+            var resourceLoader = new ResourceLoader();
             try
             {
                 Process.Start(new ProcessStartInfo { FileName = "wt", UseShellExecute = true });
             }
             catch (Exception ex)
             {
-                ShowError("打开失败，可能您的系统不支持此操作。\n错误信息：" + ex.Message, "错误");
+                ShowError(resourceLoader.GetString("Dialog_OpenError") + "\n" + resourceLoader.GetString("Dialog_ErrorInfo") + ex.Message, resourceLoader.GetString("Dialog_Title_Error"));
             }
         }
 
         private void taskmgr_Click(object sender, RoutedEventArgs e)
         {
+            var resourceLoader = new ResourceLoader();
             try
             {
                 Process.Start(new ProcessStartInfo { FileName = "taskmgr", UseShellExecute = true });
             }
             catch (Exception ex)
             {
-                ShowError("打开失败，可能您的系统不支持此操作。\n错误信息：" + ex.Message, "错误");
+                ShowError(resourceLoader.GetString("Dialog_OpenError") + "\n" + resourceLoader.GetString("Dialog_ErrorInfo") + ex.Message, resourceLoader.GetString("Dialog_Title_Error"));
             }
         }
 
         private void devmgmt_Click(object sender, RoutedEventArgs e)
         {
+            var resourceLoader = new ResourceLoader();
             try
             {
                 Process.Start(new ProcessStartInfo { FileName = "devmgmt.msc", UseShellExecute = true });
             }
             catch (Exception ex)
             {
-                ShowError("打开失败，可能您的系统不支持此操作。\n错误信息：" + ex.Message, "错误");
+                ShowError(resourceLoader.GetString("Dialog_OpenError") + "\n" + resourceLoader.GetString("Dialog_ErrorInfo") + ex.Message, resourceLoader.GetString("Dialog_Title_Error"));
             }
         }
 
         private void advanced_system_settings_Click(object sender, RoutedEventArgs e)
         {
+            var resourceLoader = new ResourceLoader();
             try
             {
                 Process.Start(new ProcessStartInfo { FileName = "SystemPropertiesAdvanced.exe", UseShellExecute = true });
             }
             catch (Exception ex)
             {
-                ShowError("打开失败，可能您的系统不支持此操作。\n错误信息：" + ex.Message, "错误");
+                ShowError(resourceLoader.GetString("Dialog_OpenError") + "\n" + resourceLoader.GetString("Dialog_ErrorInfo") + ex.Message, resourceLoader.GetString("Dialog_Title_Error"));
             }
         }
 
         private void compmgmt_Click(object sender, RoutedEventArgs e)
         {
+            var resourceLoader = new ResourceLoader();
             try
             {
                 Process.Start(new ProcessStartInfo { FileName = "compmgmt.msc", UseShellExecute = true });
             }
             catch (Exception ex)
             {
-                ShowError("打开失败，可能您的系统不支持此操作。\n错误信息：" + ex.Message, "错误");
+                ShowError(resourceLoader.GetString("Dialog_OpenError") + "\n" + resourceLoader.GetString("Dialog_ErrorInfo") + ex.Message, resourceLoader.GetString("Dialog_Title_Error"));
             }
         }
 
         private async void ShowError(string message, string title)
         {
+            var resourceLoader = new ResourceLoader();
             ContentDialog dialog = new ContentDialog
             {
                 Title = title,
                 Content = message,
-                CloseButtonText = "确定",
+                CloseButtonText = resourceLoader.GetString("Dialog_OK"),
                 XamlRoot = this.Content.XamlRoot,
                 Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style
             };
@@ -109,13 +116,14 @@ namespace NicoleToolbox.Pages
 
         private void shelladmin_Click(object sender, RoutedEventArgs e)
         {
+            var resourceLoader = new ResourceLoader();
             try
             {
                 Process.Start(new ProcessStartInfo { FileName = "wt", UseShellExecute = true, Verb = "runas" });
             }
             catch (Exception ex)
             {
-                ShowError("打开失败，可能您的系统不支持此操作。\n错误信息：" + ex.Message, "错误");
+                ShowError(resourceLoader.GetString("Dialog_OpenError") + "\n" + resourceLoader.GetString("Dialog_ErrorInfo") + ex.Message, resourceLoader.GetString("Dialog_Title_Error"));
             }
         }
 

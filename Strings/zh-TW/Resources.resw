@@ -240,4 +240,118 @@
   <data name="ClockWindow_TopWindowToggle.Content" xml:space="preserve">
     <value>視窗置頂</value>
   </data>
+  <data name="Tools_PageTitle.Text" xml:space="preserve">
+    <value>工具</value>
+  </data>
+  <data name="Tools_Built-inTools.Text" xml:space="preserve">
+    <value>內建工具</value>
+  </data>
+  <data name="Tools_SystemTools.Text" xml:space="preserve">
+    <value>系統工具</value>
+  </data>
+  <data name="About_PageTitle.Text" xml:space="preserve">
+    <value>關於</value>
+  </data>
+  <data name="About_AppDescription.Text" xml:space="preserve">
+    <value>基於 WinUI 3 製作的簡易工具箱。</value>
+  </data>
+  <data name="About_VersionInfoCard_Title.Text" xml:space="preserve">
+    <value>版本資訊</value>
+  </data>
+  <data name="About_LinksCard_Title.Text" xml:space="preserve">
+    <value>連結</value>
+  </data>
+  <data name="About_ContributorsCard_Title.Text" xml:space="preserve">
+    <value>貢獻者</value>
+  </data>
+  <data name="About_ContributorsCard_GoHomeButton.Content" xml:space="preserve">
+    <value>GitHub 首頁</value>
+  </data>
+  <data name="About_LinksCard_GitHub.Content" xml:space="preserve">
+    <value>GitHub 儲存庫</value>
+  </data>
+  <data name="About_LinksCard_Issues.Content" xml:space="preserve">
+    <value>回報問題</value>
+  </data>
+  <data name="About_LinksCard_Release.Content" xml:space="preserve">
+    <value>取得最新版本</value>
+  </data>
+  <data name="About_VersionInfoCard_AppVersion.Text" xml:space="preserve">
+    <value>應用程式：</value>
+  </data>
+  <data name="About_VersionInfoCard_DotnetVersion.Text" xml:space="preserve">
+    <value>.NET 桌面執行階段：</value>
+  </data>
+  <data name="About_VersionInfoCard_WinAppSdkVersion.Text" xml:space="preserve">
+    <value>Windows App Runtime: </value>
+  </data>
+  <data name="Dialog_Title_Error" xml:space="preserve">
+    <value>錯誤</value>
+  </data>
+  <data name="Dialog_OpenError" xml:space="preserve">
+    <value>開啟失敗，可能您的系統不支援此操作。</value>
+  </data>
+  <data name="Dialog_ErrorInfo" xml:space="preserve">
+    <value>錯誤資訊：</value>
+  </data>
+  <data name="Tools_OpenButton.Content" xml:space="preserve">
+    <value>開啟</value>
+  </data>
+  <data name="Tools_AdminOpenButton.Content" xml:space="preserve">
+    <value>以系統管理員身分執行</value>
+  </data>
+  <data name="Tools_GitHubAccel_Title.Text" xml:space="preserve">
+    <value>GitHub 下載加速</value>
+  </data>
+  <data name="Tools_Terminal_Title.Text" xml:space="preserve">
+    <value>終端機</value>
+  </data>
+  <data name="Tools_TaskManager_Title.Text" xml:space="preserve">
+    <value>工作管理員 </value>
+  </data>
+  <data name="Tools_DeviceManager_Title.Text" xml:space="preserve">
+    <value>裝置管理員</value>
+  </data>
+  <data name="Tools_AdvancedSystem_Title.Text" xml:space="preserve">
+    <value>進階系統設定</value>
+  </data>
+  <data name="Tools_ComputerManagement_Title.Text" xml:space="preserve">
+    <value>電腦管理</value>
+  </data>
+  <data name="GitHubProxyWindow_InputBox.PlaceholderText" xml:space="preserve">
+    <value>輸入 GitHub 連結</value>
+  </data>
+  <data name="GitHubProxyWindow_BottomLinkButton.Content" xml:space="preserve">
+    <value>下載服務由 gh-proxy.com 提供</value>
+  </data>
+  <data name="GitHubProxyWindow_ConvertButton.Content" xml:space="preserve">
+    <value>轉換</value>
+  </data>
+  <data name="GitHubProxyWindow_TeachCard_Title.Text" xml:space="preserve">
+    <value>教學</value>
+  </data>
+  <data name="GitHubProxyWindow_TeachCard_Content.Text" xml:space="preserve">
+    <value>只需要把 GitHub 的下載連結複製到輸入框，再點擊轉換即可輸出加速後的連結。</value>
+  </data>
+  <data name="GitHubProxyWindow_WindowTitle" xml:space="preserve">
+    <value>GitHub 下載加速</value>
+  </data>
+  <data name="Dialog_Tip" xml:space="preserve">
+    <value>提示</value>
+  </data>
+  <data name="GitHubProxyWindow_InputError" xml:space="preserve">
+    <value>請輸入正確的 GitHub 連結！</value>
+  </data>
+  <data name="GitHubProxyWindow_OutputCard_Title.Text" xml:space="preserve">
+    <value>加速下載連結</value>
+  </data>
+  <data name="GitHubProxyWindow_OpenButton.Content" xml:space="preserve">
+    <value>開啟</value>
+  </data>
+  <data name="GitHubProxyWindow_CopyButton.Content" xml:space="preserve">
+    <value>複製</value>
+  </data>
+  <data name="GithubProxyWindow_CopyButton_Click" xml:space="preserve">
+    <value>已複製</value>
+  </data>
 </root>

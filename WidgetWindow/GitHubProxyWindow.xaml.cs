@@ -7,6 +7,7 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using Microsoft.Windows.AI.Text;
+using Microsoft.Windows.ApplicationModel.Resources;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -32,9 +33,11 @@ namespace NicoleToolbox.WidgetWindow
     {
         public GitHubProxyWindow()
         {
+            var resourceLoader = new ResourceLoader();
             InitializeComponent();
             this.AppWindow.Resize(new SizeInt32(1200, 1000));
             this.AppWindow.SetIcon("Assets/NicoleToolbox.ico");
+            this.AppWindow.Title = resourceLoader.GetString("GitHubProxyWindow_WindowTitle");
             try
             {
                 this.AppWindow.TitleBar.PreferredTheme = TitleBarTheme.UseDefaultAppMode;
@@ -44,6 +47,7 @@ namespace NicoleToolbox.WidgetWindow
 
         private void ConvertButton_Click(object sender, RoutedEventArgs e)
         {
+            var resourceLoader = new ResourceLoader();
             string inputlink = Input.Text.Trim();
             if (string.IsNullOrEmpty(inputlink))
             {
@@ -70,7 +74,7 @@ namespace NicoleToolbox.WidgetWindow
                 }
                 else
                 {
-                    ShowError("请输入正确的 GitHub 链接！", "提示");
+                    ShowError(resourceLoader.GetString("GitHubProxyWindow_InputError"), resourceLoader.GetString("Dialog_Tip"));
                     return;
                 }
             }
@@ -85,12 +89,13 @@ namespace NicoleToolbox.WidgetWindow
 
         private async void CopyButton1_Click(object sender, RoutedEventArgs e)
         {
+            var resourceLoader = new ResourceLoader();
             string outputlink = Output1.Text;
             DataPackage dataPackage = new DataPackage();
             dataPackage.SetText(outputlink);
             Clipboard.SetContent(dataPackage);
             var originalText = CopyButton1.Content.ToString();
-            CopyButton1.Content = "已复制";
+            CopyButton1.Content = resourceLoader.GetString("GitHubProxyWindow_CopyButton_Click");
             CopyButton1.IsEnabled = false;
             await Task.Delay(2000);
             CopyButton1.Content = originalText;
@@ -105,12 +110,13 @@ namespace NicoleToolbox.WidgetWindow
 
         private async void CopyButton2_Click(object sender, RoutedEventArgs e)
         {
+            var resourceLoader = new ResourceLoader();
             string outputlink = Output2.Text;
             DataPackage dataPackage = new DataPackage();
             dataPackage.SetText(outputlink);
             Clipboard.SetContent(dataPackage);
             var originalText = CopyButton2.Content.ToString();
-            CopyButton2.Content = "已复制";
+            CopyButton2.Content = resourceLoader.GetString("GitHubProxyWindow_CopyButton_Click");
             CopyButton2.IsEnabled = false;
             await Task.Delay(2000);
             CopyButton2.Content = originalText;
@@ -125,12 +131,13 @@ namespace NicoleToolbox.WidgetWindow
 
         private async void CopyButton3_Click(object sender, RoutedEventArgs e)
         {
+            var resourceLoader = new ResourceLoader();
             string outputlink = Output3.Text;
             DataPackage dataPackage = new DataPackage();
             dataPackage.SetText(outputlink);
             Clipboard.SetContent(dataPackage);
             var originalText = CopyButton3.Content.ToString();
-            CopyButton3.Content = "已复制";
+            CopyButton3.Content = resourceLoader.GetString("GitHubProxyWindow_CopyButton_Click");
             CopyButton3.IsEnabled = false;
             await Task.Delay(2000);
             CopyButton3.Content = originalText;
@@ -145,12 +152,13 @@ namespace NicoleToolbox.WidgetWindow
 
         private async void CopyButton4_Click(object sender, RoutedEventArgs e)
         {
+            var resourceLoader = new ResourceLoader();
             string outputlink = Output4.Text;
             DataPackage dataPackage = new DataPackage();
             dataPackage.SetText(outputlink);
             Clipboard.SetContent(dataPackage);
             var originalText = CopyButton4.Content.ToString();
-            CopyButton4.Content = "已复制";
+            CopyButton4.Content = resourceLoader.GetString("GitHubProxyWindow_CopyButton_Click");
             CopyButton4.IsEnabled = false;
             await Task.Delay(2000);
             CopyButton4.Content = originalText;
@@ -165,12 +173,13 @@ namespace NicoleToolbox.WidgetWindow
 
         private async void CopyButton5_Click(object sender, RoutedEventArgs e)
         {
+            var resourceLoader = new ResourceLoader();
             string outputlink = Output5.Text;
             DataPackage dataPackage = new DataPackage();
             dataPackage.SetText(outputlink);
             Clipboard.SetContent(dataPackage);
             var originalText = CopyButton5.Content.ToString();
-            CopyButton5.Content = "已复制";
+            CopyButton5.Content = resourceLoader.GetString("GitHubProxyWindow_CopyButton_Click");
             CopyButton5.IsEnabled = false;
             await Task.Delay(2000);
             CopyButton5.Content = originalText;
@@ -185,11 +194,12 @@ namespace NicoleToolbox.WidgetWindow
 
         private async void ShowError(string message, string title)
         {
+            var resourceLoader = new ResourceLoader();
             ContentDialog dialog = new ContentDialog
             {
                 Title = title,
                 Content = message,
-                CloseButtonText = "确定",
+                CloseButtonText = resourceLoader.GetString("Dialog_OK"),
                 XamlRoot = this.Content.XamlRoot,
                 Style = Microsoft.UI.Xaml.Application.Current.Resources["DefaultContentDialogStyle"] as Style
             };
