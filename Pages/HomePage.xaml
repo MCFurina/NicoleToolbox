@@ -9,8 +9,8 @@
     mc:Ignorable="d" NavigationCacheMode="Required">
 
     <Grid>
-        <ScrollView ContentOrientation="Both" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" MaxWidth="1024">
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="36,40,0,0">
+        <ScrollView HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" MaxWidth="1024">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="36,40,36,40">
                 <Grid Margin="0,0,0,36">
                     <StackPanel VerticalAlignment="Center">
                         <TextBlock Text="NicoleToolbox" Style="{StaticResource TitleTextBlockStyle}"/>
@@ -20,8 +20,8 @@
                 </Grid>
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="6*"/>
+                        <ColumnDefinition Width="4*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
@@ -66,7 +66,7 @@
                                     <TextBlock Grid.Row="2" Grid.Column="0" x:Uid="Home_DiskC_FreeLabel" Margin="0,0,0,10" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
                                     <TextBlock Grid.Row="2" Grid.Column="1" x:Name="CFree" Margin="10,0,0,10" TextWrapping="Wrap" IsTextSelectionEnabled="True"/>
                                 </Grid>
-                                <ProgressBar x:Name="CDiskProgress" Value="0" Width="200"/>
+                                <ProgressBar x:Name="CDiskProgress" Value="0" HorizontalAlignment="Stretch"/>
                                 <Grid Margin="0,8,0,0">
                                     <TextBlock Text="0%" x:Name="CDiskPercentage" VerticalAlignment="Center" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
                                 </Grid>
@@ -118,10 +118,10 @@
                             <StackPanel Orientation="Vertical" Grid.Row="0">
                                 <TextBlock x:Uid="Home_ResourceUsageCard_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,20"/>
                                 <TextBlock x:Uid="Home_Resource_CPULabel" Margin="0,0,0,10"/>
-                                <ProgressBar Value="0" Width="200" Margin="0,0,0,8" x:Name="CPUProgress"/>
+                                <ProgressBar Value="0" HorizontalAlignment="Stretch" Margin="0,0,0,8" x:Name="CPUProgress"/>
                                 <TextBlock Text="0%" HorizontalAlignment="Left" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,20" x:Name="CPUPercentage"/>
                                 <TextBlock x:Uid="Home_Resource_RAMLabel" Margin="0,0,0,10"/>
-                                <ProgressBar Value="0" Width="200" Margin="0,0,0,8" x:Name="RAMProgress"/>
+                                <ProgressBar Value="0" HorizontalAlignment="Stretch" Margin="0,0,0,8" x:Name="RAMProgress"/>
                                 <Grid Margin="0,0,0,10">
                                     <TextBlock Text="0%" VerticalAlignment="Center" Foreground="{ThemeResource TextFillColorSecondaryBrush}" x:Name="RAMPercentage"/>
                                     <TextBlock Text="0 GB / 0 GB" HorizontalAlignment="Right" Foreground="{ThemeResource TextFillColorSecondaryBrush}" x:Name="RAMUsage"/>
