@@ -354,4 +354,7 @@
   <data name="GithubProxyWindow_CopyButton_Click" xml:space="preserve">
     <value>已复制</value>
   </data>
+  <data name="Tools_All.Text" xml:space="preserve">
+    <value>全部</value>
+  </data>
 </root>

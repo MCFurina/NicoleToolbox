@@ -131,5 +131,28 @@ namespace NicoleToolbox.Pages
         {
             new WidgetWindow.GitHubProxyWindow().Activate();
         }
+
+        private void SelectorBar1_SelectionChanged(SelectorBar sender, SelectorBarSelectionChangedEventArgs args)
+        {
+            SelectorBarItem selectedItem = sender.SelectedItem;
+            int currentSelectedIndex = sender.Items.IndexOf(selectedItem);
+            switch (currentSelectedIndex)
+            {
+                case 0:
+                    BuiltinTools_Grid.Visibility = Visibility.Visible;
+                    SystemTools_Grid.Visibility = Visibility.Visible;
+                    break;
+                case 1:
+                    BuiltinTools_Grid.Visibility = Visibility.Visible;
+                    SystemTools_Grid.Visibility = Visibility.Collapsed;
+                    break;
+                case 2:
+                    BuiltinTools_Grid.Visibility = Visibility.Collapsed;
+                    SystemTools_Grid.Visibility = Visibility.Visible;
+                    break;
+                default:
+                    return;
+            }
+        }
     }
 }

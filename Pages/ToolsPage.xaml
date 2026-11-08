@@ -6,99 +6,107 @@
     xmlns:local="using:NicoleToolbox.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:CommunityToolkit.WinUI.Controls"
     mc:Ignorable="d" NavigationCacheMode="Required">
 
-    <Grid>
-        <ScrollView ContentOrientation="Both" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" MaxWidth="1024">
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="36,40,0,0">
-                <TextBlock x:Uid="Tools_PageTitle" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,36"/>
-                <TextBlock x:Uid="Tools_Built-inTools" HorizontalAlignment="Left" Style="{StaticResource BodyLargeTextBlockStyle}" Margin="0,0,0,10"/>
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Column="0" Grid.Row="0">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <TextBlock Grid.Row="0" x:Uid="Tools_GitHubAccel_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
-                            <Button Grid.Row="1" x:Uid="Tools_OpenButton" x:Name="ghproxy" Click="ghproxy_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
-                        </Grid>
-                    </Border>
-                </Grid>
-                <TextBlock x:Uid="Tools_SystemTools" HorizontalAlignment="Left" Style="{StaticResource BodyLargeTextBlockStyle}" Margin="0,10,0,10"/>
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Column="0" Grid.Row="0">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <TextBlock Grid.Row="0" x:Uid="Tools_Terminal_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
-                            <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Spacing="10">
-                                <Button x:Uid="Tools_AdminOpenButton" x:Name="shelladmin" Click="shelladmin_Click"/>
-                                <Button x:Uid="Tools_OpenButton" x:Name="shell" Click="shell_Click"/>
-                            </StackPanel>
-                        </Grid>
-                    </Border>
-                    <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Column="1" Grid.Row="0">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <TextBlock Grid.Row="0" x:Uid="Tools_TaskManager_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
-                            <Button Grid.Row="1" x:Uid="Tools_OpenButton" x:Name="taskmgr" Click="taskmgr_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
-                        </Grid>
-                    </Border>
-                    <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Column="2" Grid.Row="0">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <TextBlock Grid.Row="0" x:Uid="Tools_DeviceManager_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
-                            <Button Grid.Row="1" x:Uid="Tools_OpenButton" x:Name="devmgmt" Click="devmgmt_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
-                        </Grid>
-                    </Border>
-                    <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Column="0" Grid.Row="1">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <TextBlock Grid.Row="0" x:Uid="Tools_AdvancedSystem_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
-                            <Button Grid.Row="1" x:Uid="Tools_OpenButton" x:Name="advanced_system_settings" Click="advanced_system_settings_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
-                        </Grid>
-                    </Border>
-                    <Border Style="{StaticResource CardBorderStyle}" Margin="10" Grid.Column="1" Grid.Row="1">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <TextBlock Grid.Row="0" x:Uid="Tools_ComputerManagement_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
-                            <Button Grid.Row="1" x:Uid="Tools_OpenButton" x:Name="compmgmt" Click="compmgmt_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
-                        </Grid>
-                    </Border>
-                </Grid>
-            </StackPanel>
-        </ScrollView>
+    <Grid MaxWidth="1024">
+        <Grid Margin="36,40,36,40">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Uid="Tools_PageTitle" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,10" Grid.Row="0"/>
+            <SelectorBar x:Name="SelectorBar1" SelectionChanged="SelectorBar1_SelectionChanged" Margin="0,0,0,36" Grid.Row="1">
+                <SelectorBarItem x:Name="SelectorBarItem1" x:Uid="Tools_All" IsSelected="True"/>
+                <SelectorBarItem x:Name="SelectorBarItem2" x:Uid="Tools_Built-inTools"/>
+                <SelectorBarItem x:Name="SelectorBarItem3" x:Uid="Tools_SystemTools"/>
+            </SelectorBar>
+            <ScrollView HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" Grid.Row="2">
+                <StackPanel Orientation="Vertical">
+                    <Grid x:Name="BuiltinTools_Grid" Margin="0,0,0,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock x:Uid="Tools_Built-inTools" HorizontalAlignment="Left" Style="{StaticResource BodyLargeTextBlockStyle}" Margin="0,0,0,10" Grid.Row="0"/>
+                        <controls:WrapPanel Orientation="Horizontal" Grid.Row="1">
+                            <Border Style="{StaticResource CardBorderStyle}" Margin="10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0" x:Uid="Tools_GitHubAccel_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
+                                    <Button Grid.Row="1" x:Uid="Tools_OpenButton" x:Name="ghproxy" Click="ghproxy_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                                </Grid>
+                            </Border>
+                        </controls:WrapPanel>
+                    </Grid>
+                    <Grid x:Name="SystemTools_Grid" Margin="0,0,0,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock x:Uid="Tools_SystemTools" HorizontalAlignment="Left" Style="{StaticResource BodyLargeTextBlockStyle}" Margin="0,0,0,10" Grid.Row="0"/>
+                        <controls:WrapPanel Orientation="Horizontal" Grid.Row="1">
+                            <Border Style="{StaticResource CardBorderStyle}" Margin="10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0" x:Uid="Tools_Terminal_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
+                                    <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Spacing="10">
+                                        <Button x:Uid="Tools_AdminOpenButton" x:Name="shelladmin" Click="shelladmin_Click"/>
+                                        <Button x:Uid="Tools_OpenButton" x:Name="shell" Click="shell_Click"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                            <Border Style="{StaticResource CardBorderStyle}" Margin="10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0" x:Uid="Tools_TaskManager_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
+                                    <Button Grid.Row="1" x:Uid="Tools_OpenButton" x:Name="taskmgr" Click="taskmgr_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                                </Grid>
+                            </Border>
+                            <Border Style="{StaticResource CardBorderStyle}" Margin="10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0" x:Uid="Tools_DeviceManager_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
+                                    <Button Grid.Row="1" x:Uid="Tools_OpenButton" x:Name="devmgmt" Click="devmgmt_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                                </Grid>
+                            </Border>
+                            <Border Style="{StaticResource CardBorderStyle}" Margin="10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0" x:Uid="Tools_AdvancedSystem_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
+                                    <Button Grid.Row="1" x:Uid="Tools_OpenButton" x:Name="advanced_system_settings" Click="advanced_system_settings_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                                </Grid>
+                            </Border>
+                            <Border Style="{StaticResource CardBorderStyle}" Margin="10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0" x:Uid="Tools_ComputerManagement_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
+                                    <Button Grid.Row="1" x:Uid="Tools_OpenButton" x:Name="compmgmt" Click="compmgmt_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                                </Grid>
+                            </Border>
+                        </controls:WrapPanel>
+                    </Grid>
+                </StackPanel>
+            </ScrollView>
+        </Grid>
     </Grid>
 </Page>

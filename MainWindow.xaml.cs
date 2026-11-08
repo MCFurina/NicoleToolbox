@@ -40,6 +40,11 @@ namespace NicoleToolbox
             SetTitleBar(MainTitleBar);
             this.AppWindow.SetIcon("Assets/NicoleToolbox.ico");
             this.AppWindow.Resize(new SizeInt32(1200, 800));
+            if (this.AppWindow.Presenter is OverlappedPresenter presenter)
+            {
+                presenter.PreferredMinimumWidth = 800;
+                presenter.PreferredMinimumHeight = 600;
+            }
             var area = DisplayArea.GetFromWindowId(AppWindow.Id, DisplayAreaFallback.Primary);
             var x = (area.WorkArea.Width - 1200) / 2;
             var y = (area.WorkArea.Height - 800) / 2;
