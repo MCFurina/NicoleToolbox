@@ -21,6 +21,7 @@
                 <SelectorBarItem x:Name="SelectorBarItem1" x:Uid="Tools_All" IsSelected="True"/>
                 <SelectorBarItem x:Name="SelectorBarItem2" x:Uid="Tools_Built-inTools"/>
                 <SelectorBarItem x:Name="SelectorBarItem3" x:Uid="Tools_SystemTools"/>
+                <SelectorBarItem x:Name="SelectorBarItem4" x:Uid="Tools_ThirdPartyTools"/>
             </SelectorBar>
             <ScrollView HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" Grid.Row="2">
                 <StackPanel Orientation="Vertical">
@@ -101,6 +102,71 @@
                                     </Grid.RowDefinitions>
                                     <TextBlock Grid.Row="0" x:Uid="Tools_ComputerManagement_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
                                     <Button Grid.Row="1" x:Uid="Tools_OpenButton" x:Name="compmgmt" Click="compmgmt_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                                </Grid>
+                            </Border>
+                        </controls:WrapPanel>
+                    </Grid>
+                    <Grid x:Name="ThirdPartyTools_Grid" Margin="0,0,0,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock x:Uid="Tools_ThirdPartyTools" HorizontalAlignment="Left" Style="{StaticResource BodyLargeTextBlockStyle}" Margin="0,0,0,10" Grid.Row="0"/>
+                        <controls:WrapPanel Orientation="Horizontal" Grid.Row="1">
+                            <Border Style="{StaticResource CardBorderStyle}" Margin="10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0" Text="CPU-Z" Style="{StaticResource BodyLargeStrongTextBlockStyle}"/>
+                                    <TextBlock Grid.Row="1" x:Uid="Tools_ThirdPartyTools_CPU_Z" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
+                                    <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Spacing="10">
+                                        <Button x:Uid="Tools_OpenButton" x:Name="cpuz" Click="cpuz_Click"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                            <Border Style="{StaticResource CardBorderStyle}" Margin="10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0" Text="CoreTemp" Style="{StaticResource BodyLargeStrongTextBlockStyle}"/>
+                                    <TextBlock Grid.Row="1" x:Uid="Tools_ThirdPartyTools_CoreTemp" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
+                                    <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Spacing="10">
+                                        <Button x:Uid="Tools_OpenButton" x:Name="coretemp" Click="coretemp_Click"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                            <Border Style="{StaticResource CardBorderStyle}" Margin="10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0" Text="CrystalDiskInfo" Style="{StaticResource BodyLargeStrongTextBlockStyle}"/>
+                                    <TextBlock Grid.Row="1" x:Uid="Tools_ThirdPartyTools_DiskInfo" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
+                                    <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Spacing="10">
+                                        <Button x:Uid="Tools_OpenButton" x:Name="diskinfo" Click="diskinfo_Click"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                            <Border Style="{StaticResource CardBorderStyle}" Margin="10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0" Text="CrystalDiskMark" Style="{StaticResource BodyLargeStrongTextBlockStyle}"/>
+                                    <TextBlock Grid.Row="1" x:Uid="Tools_ThirdPartyTools_DiskMark" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
+                                    <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Spacing="10">
+                                        <Button x:Uid="Tools_OpenButton" x:Name="diskmark" Click="diskmark_Click"/>
+                                    </StackPanel>
                                 </Grid>
                             </Border>
                         </controls:WrapPanel>

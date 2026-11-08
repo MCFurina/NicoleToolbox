@@ -141,17 +141,110 @@ namespace NicoleToolbox.Pages
                 case 0:
                     BuiltinTools_Grid.Visibility = Visibility.Visible;
                     SystemTools_Grid.Visibility = Visibility.Visible;
+                    ThirdPartyTools_Grid.Visibility = Visibility.Visible;
                     break;
                 case 1:
                     BuiltinTools_Grid.Visibility = Visibility.Visible;
                     SystemTools_Grid.Visibility = Visibility.Collapsed;
+                    ThirdPartyTools_Grid.Visibility = Visibility.Collapsed;
                     break;
                 case 2:
                     BuiltinTools_Grid.Visibility = Visibility.Collapsed;
                     SystemTools_Grid.Visibility = Visibility.Visible;
+                    ThirdPartyTools_Grid.Visibility = Visibility.Collapsed;
+                    break;
+                case 3:
+                    BuiltinTools_Grid.Visibility = Visibility.Collapsed;
+                    SystemTools_Grid.Visibility = Visibility.Collapsed;
+                    ThirdPartyTools_Grid.Visibility = Visibility.Visible;
                     break;
                 default:
                     return;
+            }
+        }
+
+        private void diskinfo_Click(object sender, RoutedEventArgs e)
+        {
+            var resourceLoader = new ResourceLoader();
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = Path.Combine(AppContext.BaseDirectory, "ThirdPartyTools", "CrystalDiskInfo", "DiskInfo64.exe"),
+                    WorkingDirectory = Path.Combine(AppContext.BaseDirectory, "ThirdPartyTools", "CrystalDiskInfo"),
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                ShowError(resourceLoader.GetString("Dialog_OpenError") + "\n" + resourceLoader.GetString("Dialog_ErrorInfo") + ex.Message, resourceLoader.GetString("Dialog_Title_Error"));
+            }
+        }
+
+        private void diskmark_Click(object sender, RoutedEventArgs e)
+        {
+            var resourceLoader = new ResourceLoader();
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = Path.Combine(AppContext.BaseDirectory, "ThirdPartyTools", "CrystalDiskMark", "DiskMark64.exe"),
+                    WorkingDirectory = Path.Combine(AppContext.BaseDirectory, "ThirdPartyTools", "CrystalDiskMark"),
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                ShowError(resourceLoader.GetString("Dialog_OpenError") + "\n" + resourceLoader.GetString("Dialog_ErrorInfo") + ex.Message, resourceLoader.GetString("Dialog_Title_Error"));
+            }
+        }
+
+        private void coretemp_Click(object sender, RoutedEventArgs e)
+        {
+            var resourceLoader = new ResourceLoader();
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = Path.Combine(AppContext.BaseDirectory, "ThirdPartyTools", "CoreTemp", "Core Temp.exe"),
+                    WorkingDirectory = Path.Combine(AppContext.BaseDirectory, "ThirdPartyTools", "CoreTemp"),
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                ShowError(resourceLoader.GetString("Dialog_OpenError") + "\n" + resourceLoader.GetString("Dialog_ErrorInfo") + ex.Message, resourceLoader.GetString("Dialog_Title_Error"));
+            }
+        }
+
+        private void cpuz_Click(object sender, RoutedEventArgs e)
+        {
+            var resourceLoader = new ResourceLoader();
+            string applang = resourceLoader.GetString("App_LangCode");
+            try
+            {
+                if (applang == "zh-CN")
+                {
+                    Process.Start(new ProcessStartInfo
+                    {
+                        FileName = Path.Combine(AppContext.BaseDirectory, "ThirdPartyTools", "CPU_Z_CN", "cpuz_x64.exe"),
+                        WorkingDirectory = Path.Combine(AppContext.BaseDirectory, "ThirdPartyTools", "CPU_Z_CN"),
+                        UseShellExecute = true
+                    });
+                }
+                else
+                {
+                    Process.Start(new ProcessStartInfo
+                    {
+                        FileName = Path.Combine(AppContext.BaseDirectory, "ThirdPartyTools", "CPU_Z_EN", "cpuz_x64.exe"),
+                        WorkingDirectory = Path.Combine(AppContext.BaseDirectory, "ThirdPartyTools", "CPU_Z_EN"),
+                        UseShellExecute = true
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowError(resourceLoader.GetString("Dialog_OpenError") + "\n" + resourceLoader.GetString("Dialog_ErrorInfo") + ex.Message, resourceLoader.GetString("Dialog_Title_Error"));
             }
         }
     }

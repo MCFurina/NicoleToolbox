@@ -357,4 +357,19 @@
   <data name="Tools_All.Text" xml:space="preserve">
     <value>全部</value>
   </data>
+  <data name="Tools_ThirdPartyTools.Text" xml:space="preserve">
+    <value>サードパーティ製ツール</value>
+  </data>
+  <data name="Tools_ThirdPartyTools_DiskInfo.Text" xml:space="preserve">
+    <value>ハードディスクの健康情報</value>
+  </data>
+  <data name="Tools_ThirdPartyTools_DiskMark.Text" xml:space="preserve">
+    <value>ハードディスクの速度測定</value>
+  </data>
+  <data name="Tools_ThirdPartyTools_CoreTemp.Text" xml:space="preserve">
+    <value>CPU温度監視ツール</value>
+  </data>
+  <data name="Tools_ThirdPartyTools_CPU_Z.Text" xml:space="preserve">
+    <value>CPU・マザボ・メモリ・GPU情報</value>
+  </data>
 </root>

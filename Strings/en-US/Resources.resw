@@ -357,4 +357,19 @@
   <data name="Tools_All.Text" xml:space="preserve">
     <value>All</value>
   </data>
+  <data name="Tools_ThirdPartyTools.Text" xml:space="preserve">
+    <value>Third Party Tools</value>
+  </data>
+  <data name="Tools_ThirdPartyTools_DiskInfo.Text" xml:space="preserve">
+    <value>Hard Drive Health Information</value>
+  </data>
+  <data name="Tools_ThirdPartyTools_DiskMark.Text" xml:space="preserve">
+    <value>Hard Drive Speed Test</value>
+  </data>
+  <data name="Tools_ThirdPartyTools_CoreTemp.Text" xml:space="preserve">
+    <value>CPU Temperature Monitoring Tool</value>
+  </data>
+  <data name="Tools_ThirdPartyTools_CPU_Z.Text" xml:space="preserve">
+    <value>CPU, Motherboard, RAM, GPU Info</value>
+  </data>
 </root>
