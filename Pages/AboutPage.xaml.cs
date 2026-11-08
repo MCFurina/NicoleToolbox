@@ -35,7 +35,7 @@ namespace NicoleToolbox.Pages
 
         private void AppVersionLoad()
         {
-            string appversion = Assembly.GetExecutingAssembly().GetName().Version?.ToString() ?? "未知";
+            var appversion = Assembly.GetEntryAssembly()?.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion;
             AppVersion.Text = appversion;
         }
 
