@@ -309,12 +309,6 @@
   <data name="Tools_TaskManager_Title.Text" xml:space="preserve">
     <value>任务管理器</value>
   </data>
-  <data name="Tools_DeviceManager_Title.Text" xml:space="preserve">
-    <value>设备管理器</value>
-  </data>
-  <data name="Tools_AdvancedSystem_Title.Text" xml:space="preserve">
-    <value>高级系统设置</value>
-  </data>
   <data name="Tools_ComputerManagement_Title.Text" xml:space="preserve">
     <value>计算机管理</value>
   </data>
@@ -368,5 +362,17 @@
   </data>
   <data name="Tools_ThirdPartyTools_CPU_Z.Text" xml:space="preserve">
     <value>查看CPU、主板、内存、显卡的信息</value>
+  </data>
+  <data name="Tools_GitHubAccel_Info.Text" xml:space="preserve">
+    <value>一键将 GitHub 下载链接转换成加速后的链接</value>
+  </data>
+  <data name="Tools_TaskManager_Info.Text" xml:space="preserve">
+    <value>查看并管理系统运行进程</value>
+  </data>
+  <data name="Tools_Terminal_Info.Text" xml:space="preserve">
+    <value>执行命令行指令</value>
+  </data>
+  <data name="Tools_ComputerManagement_Info.Text" xml:space="preserve">
+    <value>管理磁盘、服务与系统日志</value>
   </data>
 </root>

@@ -57,32 +57,6 @@ namespace NicoleToolbox.Pages
             }
         }
 
-        private void devmgmt_Click(object sender, RoutedEventArgs e)
-        {
-            var resourceLoader = new ResourceLoader();
-            try
-            {
-                Process.Start(new ProcessStartInfo { FileName = "devmgmt.msc", UseShellExecute = true });
-            }
-            catch (Exception ex)
-            {
-                ShowError(resourceLoader.GetString("Dialog_OpenError") + "\n" + resourceLoader.GetString("Dialog_ErrorInfo") + ex.Message, resourceLoader.GetString("Dialog_Title_Error"));
-            }
-        }
-
-        private void advanced_system_settings_Click(object sender, RoutedEventArgs e)
-        {
-            var resourceLoader = new ResourceLoader();
-            try
-            {
-                Process.Start(new ProcessStartInfo { FileName = "SystemPropertiesAdvanced.exe", UseShellExecute = true });
-            }
-            catch (Exception ex)
-            {
-                ShowError(resourceLoader.GetString("Dialog_OpenError") + "\n" + resourceLoader.GetString("Dialog_ErrorInfo") + ex.Message, resourceLoader.GetString("Dialog_Title_Error"));
-            }
-        }
-
         private void compmgmt_Click(object sender, RoutedEventArgs e)
         {
             var resourceLoader = new ResourceLoader();

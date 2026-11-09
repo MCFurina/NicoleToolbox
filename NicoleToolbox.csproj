@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<Version>1.0.0.0</Version>
-		<InformationalVersion>1.0.0.0-Beta.3</InformationalVersion>
+		<InformationalVersion>1.0.0.0-Beta.4</InformationalVersion>
 		<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
 		<OutputType>WinExe</OutputType>
 		<TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>

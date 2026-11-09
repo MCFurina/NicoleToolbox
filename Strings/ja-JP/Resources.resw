@@ -309,12 +309,6 @@
   <data name="Tools_TaskManager_Title.Text" xml:space="preserve">
     <value>タスク マネージャー</value>
   </data>
-  <data name="Tools_DeviceManager_Title.Text" xml:space="preserve">
-    <value>デバイス マネージャー</value>
-  </data>
-  <data name="Tools_AdvancedSystem_Title.Text" xml:space="preserve">
-    <value>システムの詳細設定</value>
-  </data>
   <data name="Tools_ComputerManagement_Title.Text" xml:space="preserve">
     <value>コンピューターの管理</value>
   </data>
@@ -368,5 +362,17 @@
   </data>
   <data name="Tools_ThirdPartyTools_CPU_Z.Text" xml:space="preserve">
     <value>CPU・マザボ・メモリ・GPU情報</value>
+  </data>
+  <data name="Tools_GitHubAccel_Info.Text" xml:space="preserve">
+    <value>GitHubのダウンロードリンクをワンクリックで高速化リンクに変換</value>
+  </data>
+  <data name="Tools_TaskManager_Info.Text" xml:space="preserve">
+    <value>実行中のプロセスを表示・管理</value>
+  </data>
+  <data name="Tools_Terminal_Info.Text" xml:space="preserve">
+    <value>コマンドライン命令を実行</value>
+  </data>
+  <data name="Tools_ComputerManagement_Info.Text" xml:space="preserve">
+    <value>ディスク、サービス、ログの管理</value>
   </data>
 </root>

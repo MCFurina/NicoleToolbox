@@ -309,12 +309,6 @@
   <data name="Tools_TaskManager_Title.Text" xml:space="preserve">
     <value>Task Manager</value>
   </data>
-  <data name="Tools_DeviceManager_Title.Text" xml:space="preserve">
-    <value>Device Manager</value>
-  </data>
-  <data name="Tools_AdvancedSystem_Title.Text" xml:space="preserve">
-    <value>Advanced System Settings</value>
-  </data>
   <data name="Tools_ComputerManagement_Title.Text" xml:space="preserve">
     <value>Computer Management</value>
   </data>
@@ -368,5 +362,17 @@
   </data>
   <data name="Tools_ThirdPartyTools_CPU_Z.Text" xml:space="preserve">
     <value>CPU, Motherboard, RAM, GPU Info</value>
+  </data>
+  <data name="Tools_GitHubAccel_Info.Text" xml:space="preserve">
+    <value>One-click to convert GitHub download links to accelerated links</value>
+  </data>
+  <data name="Tools_TaskManager_Info.Text" xml:space="preserve">
+    <value>View and manage running processes</value>
+  </data>
+  <data name="Tools_Terminal_Info.Text" xml:space="preserve">
+    <value>Execute command-line instructions</value>
+  </data>
+  <data name="Tools_ComputerManagement_Info.Text" xml:space="preserve">
+    <value>Manage disks, services, and logs</value>
   </data>
 </root>

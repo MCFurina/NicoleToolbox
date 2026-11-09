@@ -10,7 +10,7 @@
     mc:Ignorable="d" NavigationCacheMode="Required">
 
     <Grid MaxWidth="1024">
-        <Grid Margin="36,40,36,40">
+        <Grid Margin="36,40,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -25,7 +25,7 @@
             </SelectorBar>
             <ScrollView HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" Grid.Row="2">
                 <StackPanel Orientation="Vertical">
-                    <Grid x:Name="BuiltinTools_Grid" Margin="0,0,0,10">
+                    <Grid x:Name="BuiltinTools_Grid" Margin="0,0,0,20">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
@@ -36,15 +36,17 @@
                                 <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
-                                    <TextBlock Grid.Row="0" x:Uid="Tools_GitHubAccel_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
-                                    <Button Grid.Row="1" x:Uid="Tools_OpenButton" x:Name="ghproxy" Click="ghproxy_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                                    <TextBlock Grid.Row="0" x:Uid="Tools_GitHubAccel_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}"/>
+                                    <TextBlock Grid.Row="1" x:Uid="Tools_GitHubAccel_Info" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
+                                    <Button Grid.Row="2" x:Uid="Tools_OpenButton" x:Name="ghproxy" Click="ghproxy_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
                                 </Grid>
                             </Border>
                         </controls:WrapPanel>
                     </Grid>
-                    <Grid x:Name="SystemTools_Grid" Margin="0,0,0,10">
+                    <Grid x:Name="SystemTools_Grid" Margin="0,0,0,20">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
@@ -55,10 +57,24 @@
                                 <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
-                                    <TextBlock Grid.Row="0" x:Uid="Tools_Terminal_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
-                                    <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Spacing="10">
+                                    <TextBlock x:Uid="Tools_TaskManager_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Grid.Row="0"/>
+                                    <TextBlock Grid.Row="1" x:Uid="Tools_TaskManager_Info" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
+                                    <Button Grid.Row="2" x:Uid="Tools_OpenButton" x:Name="taskmgr" Click="taskmgr_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                                </Grid>
+                            </Border>
+                            <Border Style="{StaticResource CardBorderStyle}" Margin="10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock x:Uid="Tools_Terminal_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Grid.Row="0"/>
+                                    <TextBlock Grid.Row="1" x:Uid="Tools_Terminal_Info" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
+                                    <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Spacing="10">
                                         <Button x:Uid="Tools_AdminOpenButton" x:Name="shelladmin" Click="shelladmin_Click"/>
                                         <Button x:Uid="Tools_OpenButton" x:Name="shell" Click="shell_Click"/>
                                     </StackPanel>
@@ -68,45 +84,17 @@
                                 <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="*"/>
-                                    </Grid.RowDefinitions>
-                                    <TextBlock Grid.Row="0" x:Uid="Tools_TaskManager_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
-                                    <Button Grid.Row="1" x:Uid="Tools_OpenButton" x:Name="taskmgr" Click="taskmgr_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
-                                </Grid>
-                            </Border>
-                            <Border Style="{StaticResource CardBorderStyle}" Margin="10">
-                                <Grid>
-                                    <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
-                                    <TextBlock Grid.Row="0" x:Uid="Tools_DeviceManager_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
-                                    <Button Grid.Row="1" x:Uid="Tools_OpenButton" x:Name="devmgmt" Click="devmgmt_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
-                                </Grid>
-                            </Border>
-                            <Border Style="{StaticResource CardBorderStyle}" Margin="10">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="*"/>
-                                    </Grid.RowDefinitions>
-                                    <TextBlock Grid.Row="0" x:Uid="Tools_AdvancedSystem_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
-                                    <Button Grid.Row="1" x:Uid="Tools_OpenButton" x:Name="advanced_system_settings" Click="advanced_system_settings_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
-                                </Grid>
-                            </Border>
-                            <Border Style="{StaticResource CardBorderStyle}" Margin="10">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="*"/>
-                                    </Grid.RowDefinitions>
-                                    <TextBlock Grid.Row="0" x:Uid="Tools_ComputerManagement_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Margin="0,0,0,10"/>
-                                    <Button Grid.Row="1" x:Uid="Tools_OpenButton" x:Name="compmgmt" Click="compmgmt_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                                    <TextBlock x:Uid="Tools_ComputerManagement_Title" Style="{StaticResource BodyLargeStrongTextBlockStyle}" Grid.Row="0"/>
+                                    <TextBlock Grid.Row="1" x:Uid="Tools_ComputerManagement_Info" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
+                                    <Button Grid.Row="2" x:Uid="Tools_OpenButton" x:Name="compmgmt" Click="compmgmt_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
                                 </Grid>
                             </Border>
                         </controls:WrapPanel>
                     </Grid>
-                    <Grid x:Name="ThirdPartyTools_Grid" Margin="0,0,0,10">
+                    <Grid x:Name="ThirdPartyTools_Grid" Margin="0,0,0,20">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>

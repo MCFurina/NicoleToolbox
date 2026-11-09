@@ -309,12 +309,6 @@
   <data name="Tools_TaskManager_Title.Text" xml:space="preserve">
     <value>工作管理員 </value>
   </data>
-  <data name="Tools_DeviceManager_Title.Text" xml:space="preserve">
-    <value>裝置管理員</value>
-  </data>
-  <data name="Tools_AdvancedSystem_Title.Text" xml:space="preserve">
-    <value>進階系統設定</value>
-  </data>
   <data name="Tools_ComputerManagement_Title.Text" xml:space="preserve">
     <value>電腦管理</value>
   </data>
@@ -368,5 +362,17 @@
   </data>
   <data name="Tools_ThirdPartyTools_CPU_Z.Text" xml:space="preserve">
     <value>CPU、主機板、記憶體、顯示卡資訊</value>
+  </data>
+  <data name="Tools_GitHubAccel_Info.Text" xml:space="preserve">
+    <value>一鍵將 GitHub 下載連結轉換為加速後的連結</value>
+  </data>
+  <data name="Tools_TaskManager_Info.Text" xml:space="preserve">
+    <value>檢視並管理執行中的處理程序</value>
+  </data>
+  <data name="Tools_Terminal_Info.Text" xml:space="preserve">
+    <value>執行命令列指令</value>
+  </data>
+  <data name="Tools_ComputerManagement_Info.Text" xml:space="preserve">
+    <value>管理磁碟、服務與系統日誌</value>
   </data>
 </root>
