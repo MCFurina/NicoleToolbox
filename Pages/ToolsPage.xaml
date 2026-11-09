@@ -134,20 +134,6 @@
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
-                                    <TextBlock Grid.Row="0" Text="CoreTemp" Style="{StaticResource BodyLargeStrongTextBlockStyle}"/>
-                                    <TextBlock Grid.Row="1" x:Uid="Tools_ThirdPartyTools_CoreTemp" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
-                                    <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Spacing="10">
-                                        <Button x:Uid="Tools_OpenButton" x:Name="coretemp" Click="coretemp_Click"/>
-                                    </StackPanel>
-                                </Grid>
-                            </Border>
-                            <Border Style="{StaticResource CardBorderStyle}" Margin="10">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="*"/>
-                                    </Grid.RowDefinitions>
                                     <TextBlock Grid.Row="0" Text="CrystalDiskInfo" Style="{StaticResource BodyLargeStrongTextBlockStyle}"/>
                                     <TextBlock Grid.Row="1" x:Uid="Tools_ThirdPartyTools_DiskInfo" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,10"/>
                                     <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Spacing="10">

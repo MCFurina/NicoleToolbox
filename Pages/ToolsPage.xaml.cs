@@ -199,24 +199,6 @@ namespace NicoleToolbox.Pages
             }
         }
 
-        private void coretemp_Click(object sender, RoutedEventArgs e)
-        {
-            var resourceLoader = new ResourceLoader();
-            try
-            {
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = Path.Combine(AppContext.BaseDirectory, "ThirdPartyTools", "CoreTemp", "Core Temp.exe"),
-                    WorkingDirectory = Path.Combine(AppContext.BaseDirectory, "ThirdPartyTools", "CoreTemp"),
-                    UseShellExecute = true
-                });
-            }
-            catch (Exception ex)
-            {
-                ShowError(resourceLoader.GetString("Dialog_OpenError") + "\n" + resourceLoader.GetString("Dialog_ErrorInfo") + ex.Message, resourceLoader.GetString("Dialog_Title_Error"));
-            }
-        }
-
         private void cpuz_Click(object sender, RoutedEventArgs e)
         {
             var resourceLoader = new ResourceLoader();

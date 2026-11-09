@@ -366,9 +366,6 @@
   <data name="Tools_ThirdPartyTools_DiskMark.Text" xml:space="preserve">
     <value>硬盘测速</value>
   </data>
-  <data name="Tools_ThirdPartyTools_CoreTemp.Text" xml:space="preserve">
-    <value>CPU温度检测工具</value>
-  </data>
   <data name="Tools_ThirdPartyTools_CPU_Z.Text" xml:space="preserve">
     <value>查看CPU、主板、内存、显卡的信息</value>
   </data>
