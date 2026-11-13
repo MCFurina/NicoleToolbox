@@ -6,7 +6,7 @@
 ![协议](https://img.shields.io/github/license/MCFurina/NicoleToolbox)
 ![最新版本](https://img.shields.io/github/v/release/MCFurina/NicoleToolbox?include_prereleases)  
 ![WinUI 3](https://img.shields.io/badge/WinUI-3-blue)
-![.NET](https://img.shields.io/badge/.NET-10.0-512BD4)
+![.NET](https://img.shields.io/badge/.NET-11.0-512BD4)
 ![Windows](https://img.shields.io/badge/Platform-Windows-0078D6)
 
 <img src="./Images/zh-CN/Home.png" alt="NicoleToolbox Home" width="800" />
@@ -15,7 +15,7 @@
 在这个页面下载：[Releases](https://github.com/MCFurina/NicoleToolbox/releases/)
 
 ## 请安装以下运行时
-.NET Desktop Runtime 10.0.14 [下载](https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.14/windowsdesktop-runtime-10.0.14-win-x64.exe)  
+.NET Desktop Runtime 11.0.0 [下载](https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/11.0.0/windowsdesktop-runtime-11.0.0-win-x64.exe)  
 Windows APP Runtime 2.6.5 [下载](https://aka.ms/windowsappsdk/2.6/2.6.5/windowsappruntimeinstall-x64.exe)  
 
 ## 已支持语言
