@@ -13,7 +13,7 @@
             <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="36,40,36,40">
                 <TextBlock x:Uid="About_PageTitle" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,36"/>
                 <Image Source="/Assets/NicoleToolbox.ico" Width="80" Height="80" HorizontalAlignment="Left" Margin="0,0,0,10"/>
-                <TextBlock Text="NicoleToolbox" HorizontalAlignment="Left" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,10"/>
+                <TextBlock Text="NicoleToolbox" HorizontalAlignment="Left" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,5"/>
                 <TextBlock x:Uid="About_AppDescription" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,20"/>
                 <Grid>
                     <Grid.RowDefinitions>
